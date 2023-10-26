@@ -331,7 +331,6 @@
 "Assets/Scripts/affinity.cs"
 "Assets/Scripts/ArrayLayout.cs"
 "Assets/Scripts/ChangeScene.cs"
-"Assets/Scripts/Dialogue.cs"
 "Assets/Scripts/DialogueManager.cs"
 "Assets/Scripts/DialogueUI.cs"
 "Assets/Scripts/LeaveConversationUI.cs"
@@ -342,6 +341,7 @@
 "Assets/Scripts/spawnMoon.cs"
 "Assets/Scripts/spawnPlanet.cs"
 "Assets/Scripts/Titlescreen.cs"
+"Assets/Scripts/tracker.cs"
 -langversion:9.0
 
 /deterministic

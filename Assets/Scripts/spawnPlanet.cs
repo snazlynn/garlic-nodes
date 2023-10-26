@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class spawnPlanet : MonoBehaviour
 {
-    public bool lastScene = false;
     public float respawnAngle;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        if (name != "Earth")
-            transform.RotateAround(Vector3.zero, Vector3.forward, Random.Range(0, 360));
-        DontDestroyOnLoad(this);
+        if (tracker.rotations[name] == Quaternion.identity)
+        {
+            if (name != "Earth")
+                transform.RotateAround(Vector3.zero, Vector3.forward, Random.Range(0, 360));
+        }
+        else
+            transform.rotation = tracker.rotations[name];
     }
 
-    void OnEnable()
+    void Start()
     {
-        if (lastScene){
+        if (tracker.lastScene.Equals(name))
+        {
             transform.RotateAround(Vector3.zero, Vector3.forward, respawnAngle);
         }
-        lastScene = false;
     }
 }

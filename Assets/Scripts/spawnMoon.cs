@@ -7,12 +7,7 @@ public class spawnMoon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this);
-    }
-
-    // Update is called once per frame
-    void OnDisable()
-    {
-        
+        if (tracker.moonRadius > 0)
+            transform.position = new Vector3(tracker.moonRadius, 0f, 0f);
     }
 }

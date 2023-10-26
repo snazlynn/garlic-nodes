@@ -63,16 +63,16 @@
     <Compile Include="Assets\Scripts\Questions.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Sentences.cs" />
-    <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\rotate.cs" />
     <Compile Include="Assets\Scripts\affinity.cs" />
-    <Compile Include="Assets\Scripts\LeaveConversationUI.cs" />
     <Compile Include="Assets\Scripts\orbitalMovement.cs" />
+    <Compile Include="Assets\Scripts\LeaveConversationUI.cs" />
     <Compile Include="Assets\Scripts\DialogueUI.cs" />
+    <Compile Include="Assets\Scripts\ArrayLayout.cs" />
     <Compile Include="Assets\Scripts\spawnMoon.cs" />
     <Compile Include="Assets\Scripts\spawnPlanet.cs" />
-    <Compile Include="Assets\Scripts\ArrayLayout.cs" />
+    <Compile Include="Assets\Scripts\tracker.cs" />
     <Compile Include="Assets\Scripts\Titlescreen.cs" />
   </ItemGroup>
   <ItemGroup>

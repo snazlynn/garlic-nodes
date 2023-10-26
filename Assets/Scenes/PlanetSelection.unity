@@ -224,7 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: 10
 --- !u!114 &73782241
 MonoBehaviour:
@@ -251,10 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Uranus
-  sceneIndex: 0
-  dateAffinityReq: 0
+  scene: Uranus
 --- !u!61 &73782243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -347,7 +343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: 5
 --- !u!114 &252214972
 MonoBehaviour:
@@ -441,10 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Mercury
-  sceneIndex: 0
-  dateAffinityReq: 10
+  scene: Mercury
 --- !u!61 &252214976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -537,7 +529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: -5
 --- !u!114 &371606890
 MonoBehaviour:
@@ -631,10 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Mars
-  sceneIndex: 0
-  dateAffinityReq: 0
+  scene: Mars
 --- !u!61 &371606894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -886,7 +874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: -10
 --- !u!114 &818788082
 MonoBehaviour:
@@ -913,10 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Saturn
-  sceneIndex: 0
-  dateAffinityReq: 0
+  scene: Saturn
 --- !u!61 &818788084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1391,7 +1375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: -10
 --- !u!114 &1632644334
 MonoBehaviour:
@@ -1485,10 +1468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Jupiter
-  sceneIndex: 0
-  dateAffinityReq: 0
+  scene: Jupiter
 --- !u!61 &1632644338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1648,7 +1628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: -5
 --- !u!114 &1725184365
 MonoBehaviour:
@@ -1675,10 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Pluto
-  sceneIndex: 0
-  dateAffinityReq: 0
+  scene: Pluto
 --- !u!61 &1725184367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1851,10 +1827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Earth
-  sceneIndex: 0
-  dateAffinityReq: 10
+  scene: Earth
 --- !u!61 &1804473508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1912,7 +1885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: -5
 --- !u!114 &1804473510
 MonoBehaviour:
@@ -1961,7 +1933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: 5
 --- !u!114 &1820766523
 MonoBehaviour:
@@ -2055,10 +2026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Venus
-  sceneIndex: 0
-  dateAffinityReq: 0
+  scene: Venus
 --- !u!61 &1820766527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2218,7 +2186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
   respawnAngle: -10
 --- !u!114 &2016272354
 MonoBehaviour:
@@ -2245,10 +2212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Neptune
-  sceneIndex: 0
-  dateAffinityReq: 0
+  scene: Neptune
 --- !u!61 &2016272356
 BoxCollider2D:
   m_ObjectHideFlags: 0

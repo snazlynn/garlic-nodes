@@ -4,19 +4,19 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     [SerializeField]
-    private string[] scenes;
-    public int sceneIndex = 0;
-    public int dateAffinityReq;
+    private string scene;
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (gameObject.GetComponent<affinity>().val >= dateAffinityReq){
-            SceneManager.LoadScene(scenes[scenes.Length+1]);
+        SceneManager.LoadScene(scene);
+
+        tracker.lastScene = gameObject.name;
+
+        foreach (var kvp in tracker.rotations)
+        {
+            tracker.rotations[kvp.Key] = GameObject.Find(kvp.Key).GetComponent<Transform>().rotation;
         }
-        else{
-            SceneManager.LoadScene(scenes[sceneIndex]);
-        }
-        gameObject.GetComponent<spawnPlanet>().lastScene = true;
-        //gameObject.SetActive(false);
+
+        tracker.moonRadius = GameObject.Find("Moon").GetComponent<Transform>().position.x;
     }
 }

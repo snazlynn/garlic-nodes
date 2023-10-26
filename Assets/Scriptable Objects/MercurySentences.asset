@@ -20,10 +20,106 @@ MonoBehaviour:
       - "Earth\u2019s moon? ... what are you doing around here?1"
     - row:
       - Um, just... looking around.0
+      - Well, just so you know, if there's a certain superstar around here you've
+        got your eye on, you'd better back off if you don't want any trouble. Alright?1
     - row:
       - Um, just... looking around.0
+      - Well, just so you know, if there's a certain superstar around here you've
+        got your eye on, you'd better back off if you don't want any trouble. Alright?1
     - row:
       - I wanted some air.0
+      - Yeah? You sure? Not looking at any particular star near us?1
+    - row:
+      - "... I\u2019m sorry?0"
+      - "I\u2019m talking about the sun.1"
+    - row:
+      - What?0
+      - "I\u2019m talking about the sun.1"
+    - row: []
+    - row:
+      - Oh. Right. Of course haha0
+      - ...1
+      - So why are you out here anyway? Aren't you like, attached to Earth?1
+    - row:
+      - Oh...0
+      - ...1
+      - So why are you out here anyway? Aren't you like, attached to Earth?1
+    - row:
+      - Um yeah no problem.0
+      - Ok.1
+      - ...1
+      - So why are you out here anyway? Aren't you like, attached to Earth?1
+    - row:
+      - No.0
+      - "I mean, every time I\u2019ve seen you, you\u2019ve always just been orbiting
+        around them...1"
+      - "... but at least you\u2019re not my competition.1"
+      - "And the sun\u2019s way out of your league anyways. No offense. But just
+        in case you were thinking about it, you two would be super incompatible.
+        You\u2019re like, complete opposites. I would be a good fit though. I would
+        be a fantastic fit for the sun.1"
+    - row:
+      - "... they\u2019re not the boss of me.0"
+      - "I mean, every time I\u2019ve seen you, you\u2019ve always just been orbiting
+        around them...1"
+      - "... but at least you\u2019re not my competition.1"
+      - "And the sun\u2019s way out of your league anyways. No offense. But just
+        in case you were thinking about it, you two would be super incompatible.
+        You\u2019re like, complete opposites. I would be a good fit though. I would
+        be a fantastic fit for the sun.1"
+    - row:
+      - Not really.0
+      - "I mean, every time I\u2019ve seen you, you\u2019ve always just been orbiting
+        around them...1"
+      - "... but at least you\u2019re not my competition.1"
+      - "And the sun\u2019s way out of your league anyways. No offense. But just
+        in case you were thinking about it, you two would be super incompatible.
+        You\u2019re like, complete opposites. I would be a good fit though. I would
+        be a fantastic fit for the sun.1"
+    - row:
+      - Do you ever do anything around here?0
+      - Sorry I mean, what do you do around here?0
+      - "... the temperature\u2019s pretty hot this close to a star?0"
+      - ...1
+      - "You\u2019re pretty bad at making conversations, aren\u2019t you?1"
+      - "Listen, here\u2019s my advice as a planet. You just gotta work out more
+        and build up your confidence like me. I mean, forget the sun for a minute,
+        no one\u2019s gonna want you as a satellite if you\u2019re this... small
+        all the time. You have no presence.1"
+      - You need to have some kind of pull of your own, you know?1
+      - "Or, maybe since you\u2019ve already got Earth, it doesn\u2019t matter that
+        much to you anyway.1"
+      - "Anyways, I\u2019ve gotta run. My orbit\u2019s about to get closer to the
+        sun. Maybe this time they\u2019ll respond to me... wish me luck!1"
+    - row:
+      - Yeah totally haha0
+      - ...1
+      - "You\u2019re pretty bad at making conversations, aren\u2019t you?1"
+      - "Listen, here\u2019s my advice as a planet. You just gotta work out more
+        and build up your confidence like me. I mean, forget the sun for a minute,
+        no one\u2019s gonna want you as a satellite if you\u2019re this... small
+        all the time. You have no presence.1"
+      - You need to have some kind of pull of your own, you know?1
+      - "Or, maybe since you\u2019ve already got Earth, it doesn\u2019t matter that
+        much to you anyway.1"
+      - "Anyways, I\u2019ve gotta run. My orbit\u2019s about to get closer to the
+        sun. Maybe this time they\u2019ll respond to me... wish me luck!1"
+    - row:
+      - ...0
+      - "... hey man, don\u2019t look so down about it. It takes a lot to measure
+        up to a star like them. I would know.1"
+      - ...1
+      - "You\u2019re pretty bad at making conversations, aren\u2019t you?1"
+      - "Listen, here\u2019s my advice as a planet. You just gotta work out more
+        and build up your confidence like me. I mean, forget the sun for a minute,
+        no one\u2019s gonna want you as a satellite if you\u2019re this... small
+        all the time. You have no presence.1"
+      - You need to have some kind of pull of your own, you know?1
+      - "Or, maybe since you\u2019ve already got Earth, it doesn\u2019t matter that
+        much to you anyway.1"
+      - "Anyways, I\u2019ve gotta run. My orbit\u2019s about to get closer to the
+        sun. Maybe this time they\u2019ll respond to me... wish me luck!1"
+    - row: []
     - row: []
     - row: []
     - row: []

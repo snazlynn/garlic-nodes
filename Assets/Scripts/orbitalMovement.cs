@@ -12,21 +12,25 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && !(move) && transform.position.x > 12f){
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && !(move) && transform.position.x > 12f)
+        {
             targetPos = transform.position + (Vector3.left * 10f);
             move = true;
         }
-        
-        if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && !(move) && transform.position.x < 92f){
+
+        if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && !(move) && transform.position.x < 92f)
+        {
             targetPos = transform.position + (Vector3.right * 10f);
             move = true;
         }
 
-        if (move){
+        if (move)
+        {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         }
 
-        if (transform.position == targetPos){
+        if (transform.position == targetPos)
+        {
             move = false;
         }
     }

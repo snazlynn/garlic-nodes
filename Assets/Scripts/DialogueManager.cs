@@ -11,7 +11,6 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private Dialogue dialogue;
     [SerializeField] private float textSpeed = 0.02f;
     [SerializeField] private Sentences sentences;
     [SerializeField] private Questions questions;
@@ -65,24 +64,30 @@ public class DialogueManager : MonoBehaviour
     public void DisplayNextQuestion() 
     {
         //Implement try catch block for IndexOutOfRangeException idicating that the conversation is over
-        if (questions.questions.rows[this.questionIndex].row.Count() == 2)
+        try
         {
-            this.option1.style.display = DisplayStyle.Flex;
-            this.option2.style.display = DisplayStyle.Flex;
+            if (questions.questions.rows[this.questionIndex].row.Count() == 2)
+            {
+                this.option1.style.display = DisplayStyle.Flex;
+                this.option2.style.display = DisplayStyle.Flex;
 
-            this.option1.text = questions.questions.rows[this.questionIndex].row[0];
-            this.option2.text = questions.questions.rows[this.questionIndex].row[1];
+                this.option1.text = questions.questions.rows[this.questionIndex].row[0];
+                this.option2.text = questions.questions.rows[this.questionIndex].row[1];
+            }
+            else
+            {
+                this.option1.style.display = DisplayStyle.Flex;
+                this.option2.style.display = DisplayStyle.Flex;
+                this.option3.style.display = DisplayStyle.Flex;
+
+                this.option1.text = questions.questions.rows[this.questionIndex].row[0];
+                this.option2.text = questions.questions.rows[this.questionIndex].row[1];
+                this.option3.text = questions.questions.rows[this.questionIndex].row[2];
+            }
         }
-        else 
+        catch (IndexOutOfRangeException) 
         {
-            Debug.Log(":P");
-            this.option1.style.display = DisplayStyle.Flex;
-            this.option2.style.display = DisplayStyle.Flex;
-            this.option3.style.display = DisplayStyle.Flex;
-
-            this.option1.text = questions.questions.rows[this.questionIndex].row[0];
-            this.option2.text = questions.questions.rows[this.questionIndex].row[1];
-            this.option3.text = questions.questions.rows[this.questionIndex].row[2];
+            SceneManager.LoadScene("PlanetSelection");
         }
         this.questionIndex++;
         option1.clicked += () =>
