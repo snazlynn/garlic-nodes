@@ -47,23 +47,22 @@ public class DialogueManager : MonoBehaviour
     }
     public void DisplayNextSentence() 
     {
-        try
+        Debug.Log(this.sentenceIndex);
+        if (this.sentenceIndex >= this.sentences.sentences.rows[this.sentencesIndex].row.Length) 
         {
-            endOfSentences = false;
+            this.endOfSentences = true;
+            DisplayNextQuestion();
+        }
+        else
+        {
+            this.endOfSentences = false;
             StopAllCoroutines();
             StartCoroutine(TypeSentence(this.sentences.sentences.rows[this.sentencesIndex].row[this.sentenceIndex]));
             this.sentenceIndex++;
         }
-        catch (IndexOutOfRangeException) 
-        {
-            this.endOfSentences = true;
-            this.sentenceIndex = 0;
-            DisplayNextQuestion();
-        }
     }
     public void DisplayNextQuestion() 
     {
-        //Implement try catch block for IndexOutOfRangeException idicating that the conversation is over
         try
         {
             if (questions.questions.rows[this.questionIndex].row.Count() == 2)
@@ -71,8 +70,8 @@ public class DialogueManager : MonoBehaviour
                 this.option1.style.display = DisplayStyle.Flex;
                 this.option2.style.display = DisplayStyle.Flex;
 
-                this.option1.text = questions.questions.rows[this.questionIndex].row[0];
-                this.option2.text = questions.questions.rows[this.questionIndex].row[1];
+                this.option1.text = questions.questions.rows[this.questionIndex].row[0].Remove(questions.questions.rows[this.questionIndex].row[0].Length - 1);
+                this.option2.text = questions.questions.rows[this.questionIndex].row[1].Remove(questions.questions.rows[this.questionIndex].row[1].Length - 1);
             }
             else
             {
@@ -80,9 +79,9 @@ public class DialogueManager : MonoBehaviour
                 this.option2.style.display = DisplayStyle.Flex;
                 this.option3.style.display = DisplayStyle.Flex;
 
-                this.option1.text = questions.questions.rows[this.questionIndex].row[0];
-                this.option2.text = questions.questions.rows[this.questionIndex].row[1];
-                this.option3.text = questions.questions.rows[this.questionIndex].row[2];
+                this.option1.text = questions.questions.rows[this.questionIndex].row[0].Remove(questions.questions.rows[this.questionIndex].row[0].Length - 1);
+                this.option2.text = questions.questions.rows[this.questionIndex].row[1].Remove(questions.questions.rows[this.questionIndex].row[1].Length - 1);
+                this.option3.text = questions.questions.rows[this.questionIndex].row[2].Remove(questions.questions.rows[this.questionIndex].row[2].Length - 1);
             }
         }
         catch (IndexOutOfRangeException) 
@@ -92,7 +91,8 @@ public class DialogueManager : MonoBehaviour
         this.questionIndex++;
         option1.clicked += () =>
         {
-            this.sentencesIndex++;
+            this.sentenceIndex = 0;
+            this.sentencesIndex = (this.questionIndex - 1) * 3 + 1;
             this.option1.style.display = DisplayStyle.None;
             this.option2.style.display = DisplayStyle.None;
             this.option3.style.display = DisplayStyle.None;
@@ -101,7 +101,8 @@ public class DialogueManager : MonoBehaviour
         };
         option2.clicked += () =>
         {
-            this.sentencesIndex += 2;
+            this.sentenceIndex = 0;
+            this.sentencesIndex = (this.questionIndex - 1) * 3 + 2;
             this.option1.style.display = DisplayStyle.None;
             this.option2.style.display = DisplayStyle.None;
             this.option3.style.display = DisplayStyle.None;
@@ -110,7 +111,8 @@ public class DialogueManager : MonoBehaviour
         };
         option3.clicked += () =>
         {
-            this.sentencesIndex += 3;
+            this.sentenceIndex = 0;
+            this.sentencesIndex = (this.questionIndex - 1) * 3 + 3;
             this.option1.style.display = DisplayStyle.None;
             this.option2.style.display = DisplayStyle.None;
             this.option3.style.display = DisplayStyle.None;
@@ -121,13 +123,17 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence(string sentence)
     {
         char[] sentenceArray = sentence.ToCharArray();
-        if (String.Equals('0', sentenceArray[sentenceArray.Count() - 1])) 
+        if (String.Equals('0', sentenceArray[sentenceArray.Count() - 1]))
         {
             this.speakerName.text = "Moon";
         }
-        else 
+        else if (String.Equals('1', sentenceArray[sentenceArray.Count() - 1]))
         {
             this.speakerName.text = sentences.planetName;
+        }
+        else 
+        {
+            this.speakerName.text = "";
         }
         sentenceArray = sentenceArray.SkipLast(1).ToArray();
         this.speech.text = "";

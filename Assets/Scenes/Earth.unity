@@ -409,8 +409,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0de83131cb6d4eb5809a7783a243b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 0290d64653510c445b9cbcef6d9443e4, type: 2}
   textSpeed: 0.02
+  sentences: {fileID: 11400000, guid: 5fe02c9708fe3194995d07b55f6fcd01, type: 2}
+  questions: {fileID: 11400000, guid: 397ce6e74635ac94b90be34daa5e4911, type: 2}
 --- !u!1 &2124471956
 GameObject:
   m_ObjectHideFlags: 0

@@ -237,8 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpeed: 0.02
-  sentences: {fileID: 0}
-  questions: {fileID: 0}
+  sentences: {fileID: 11400000, guid: a2a6c5c6a47db8640b541ade6e901c03, type: 2}
+  questions: {fileID: 11400000, guid: f564c384045e7fb479c2c6fd9d51722d, type: 2}
 --- !u!4 &795986118
 Transform:
   m_ObjectHideFlags: 0

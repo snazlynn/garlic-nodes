@@ -71,8 +71,8 @@
     <Compile Include="Assets\Scripts\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\ArrayLayout.cs" />
     <Compile Include="Assets\Scripts\spawnMoon.cs" />
-    <Compile Include="Assets\Scripts\spawnPlanet.cs" />
     <Compile Include="Assets\Scripts\tracker.cs" />
+    <Compile Include="Assets\Scripts\spawnPlanet.cs" />
     <Compile Include="Assets\Scripts\Titlescreen.cs" />
   </ItemGroup>
   <ItemGroup>

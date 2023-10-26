@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questions:
     rows:
-    - row: []
-    - row: []
+    - row:
+      - "Who\u2019s earth?0"
+      - We broke up.0
+    - row:
+      - I wanted to know more about the other planets.0
+      - "I\u2019m looking for a new planet to orbit.0"
+      - Do you really have to keep mentioning my craters?0
     - row: []
     - row: []
     - row: []
