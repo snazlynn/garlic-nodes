@@ -12,13 +12,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e1b58d2dc3cdf744afd0b9b6a597489, type: 3}
   m_Name: SaturnSentences
   m_EditorClassIdentifier: 
-  planetName: 
+  planetName: Saturn
   sentences:
     rows:
-    - row: []
-    - row: []
-    - row: []
-    - row: []
-    - row: []
-    - row: []
-    - row: []
+    - row:
+      - um... h-hello?0
+      - "Well, hello there, gorgeous! Name\u2019s Saturn. Yours?1"
+      - "uh... I-I\u2019m Moon...0"
+      - "Mmm... nah. Way too generic. That\u2019s like if I was named \u201CPlanet.\u201D1"
+      - "I\u2019m gonna call you \u201CLuna.\u201D How\u2019s that sound?1"
+    - row:
+      - "ummm... that actually... that\u2019s pretty good...0"
+      - "I should hope so. A beautiful face like yours should have a beautiful name
+        to go with it.1\t"
+      - Now, what brings you down to Saturn Town?1
+    - row:
+      - "I... uh, I don\u2019t know...0"
+      - "Ah don\u2019t worry, you\u2019ll get used to it.1"
+      - Now, what brings you down to Saturn Town?1
+    - row:
+      - "you... uh, you don\u2019t get... uh..0"
+      - "Awestruck, right? Yeah darling, I\u2019ve seen it before. Happens all the
+        time.1"
+      - Now, what brings you down to Saturn Town?1
+    - row:
+      - "I\u2019m... looking for... something to orbit...0"
+      - "Orbit? Darling, I\u2019m the KING of orbits! Check out all the moons I\u2019ve
+        got orbiting right now!1"
+      - '[You suddenly notice that Saturn is surrounded by moons.]2'
+      - '[TITAN] hey.1'
+      - '[They seem mostly disinterested in you.]2'
+      - Awesome, right? No small feat that is, either. So, you need some advice?1
+      - I... uh...0
+      - "Alright, Rule Number 1 is Confidence. You gotta be able to sell yourself,
+        and you\u2019re not gonna do that without sounding confident.1"
+      - Rule Number 2 is Uniqueness. You gotta make yourself stand out from the pack.
+        Figure out something that makes you unique and sell it. For example, check
+        THESE out!1
+      - "[Saturn makes a point of showing off their rings, tilting them so Sun\u2019s
+        light reflects off them and blinds you.]2"
+      - "Pretty wonderful, huh? You\u2019ve never seen a better ring system anywhere
+        else, and if Uranus says otherwise then let me know so I can sock \u2018em
+        in the crust.1"
+    - row:
+      - I... I want to be... your moon?0
+      - Ah, you flatter me, darling! You and everyone else, though!1
+      - '[You suddenly notice that Saturn is surrounded by moons.]2'
+      - '[TITAN] hey.1'
+      - '[They seem mostly disinterested in you.]2'
+      - "Awesome, right? And it\u2019s no wonder why. After all, check THESE out!1"
+      - "[Saturn makes a point of showing off their rings, tilting them so Sun\u2019s
+        light reflects off them and blinds you.]2"
+      - "Pretty wonderful, huh? You\u2019ve never seen a better ring system anywhere
+        else, and if Uranus says otherwise then let me know so I can sock \u2018em
+        in the crust.1"
+    - row:
+      - Oh, just... looking around.0
+      - "Well, you\u2019ve found the right place to look around! Check THESE out!1"
+      - "[Saturn makes a point of showing off their rings, tilting them so Sun\u2019s
+        light reflects off them and blinds you.]2"
+      - "Pretty wonderful, huh? You\u2019ve never seen a better ring system anywhere
+        else, and if Uranus says otherwise then let me know so I can sock \u2018em
+        in the crust.1"
+    - row:
+      - "They\u2019re... very cool.0"
+      - Yeah, I get that a lot.1
+      - "Anyway, if you\u2019re looking to become one of my moons (and you TOTALLY
+        are - it\u2019s sooo obvious)1"
+      - "...then you\u2019ll need to take my quiz.1"
+      - Q-quiz?0
+      - "It\u2019s not personal, darling. I just need a vetting process on account
+        of how many moons want to be mine.1"
+      - "Let me just grab my slide deck and... hmm. Rhea, where\u2019s my slide deck?1"
+      - '[RHEA] How should I know? I never touched that damn thing.1'
+      - "Hmm. Well, come back later and I\u2019ll get you quizzed up in no time flat,
+        darling.1"
+    - row:
+      - "They\u2019re... not really that cool.0"
+      - "[You notice that Saturn\u2019s moons, previously uninterested, are now staring
+        at you. Saturn looks appalled]2"
+      - "WHAT?? H-how could you say that? The most magnificent rings in the solar
+        system, and they\u2019re NOT THAT COOL?1"
+      - "...whatever. I\u2019ll just... pretend you didn\u2019t say that, OK? Ok.1"
+      - "Anyway, if you\u2019re looking to become one of my moons (and you TOTALLY
+        are - it\u2019s sooo obvious)1"
+      - "...then you\u2019ll need to take my quiz.1"
+      - Q-quiz?0
+      - "It\u2019s not personal, darling. I just need a vetting process on account
+        of how many moons want to be mine.1"
+      - "Let me just grab my slide deck and... hmm. Rhea, where\u2019s my slide deck?1"
+      - '[RHEA] How should I know? I never touched that damn thing.1'
+      - "Hmm. Well, come back later and I\u2019ll get you quizzed up in no time flat,
+        darling.1"

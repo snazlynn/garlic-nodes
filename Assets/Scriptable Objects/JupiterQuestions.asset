@@ -14,9 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questions:
     rows:
-    - row: []
-    - row: []
-    - row: []
+    - row:
+      - No, but you probably know Earth0
+      - "No, I\u2019m new here0"
+    - row:
+      - I broke up with Earth0
+      - Yeah, lost in your gravity ;)0
+    - row:
+      - It looks really nice2
+      - Does it hurt at all?1
+      - "Storms aren\u2019t really my thing0"
     - row: []
     - row: []
     - row: []

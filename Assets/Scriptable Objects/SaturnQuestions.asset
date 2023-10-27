@@ -14,9 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questions:
     rows:
-    - row: []
-    - row: []
-    - row: []
+    - row:
+      - I like it1
+      - I'm not so sure0
+      - You don't get to pick my name1
+    - row:
+      - I'm looking for another planet to orbit0
+      - I want to be your moon0
+      - Just sightseeing0
+    - row:
+      - They're very cool rings2
+      - They're not that cool0
     - row: []
     - row: []
     - row: []

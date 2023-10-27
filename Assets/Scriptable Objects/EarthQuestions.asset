@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questions:
     rows:
-    - row: []
+    - row:
+      - A simple "I'm sorry" wouldn't kill you.0
+      - If you got rid of the humans...0
+      - I want to get back together0
     - row: []
     - row: []
     - row: []

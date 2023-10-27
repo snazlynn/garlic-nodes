@@ -14,9 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questions:
     rows:
-    - row: []
-    - row: []
-    - row: []
+    - row:
+      - I broke up with Earth1
+      - I like you2
+      - "I\u2019m just sightseeing0"
+    - row:
+      - They made me feel invisible0
+      - "They wouldn\u2019t listen to me about humans0"
+      - "I... I\u2019d rather not talk about it...0"
+    - row:
+      - "I don\u2019t want to replace you1"
+      - Do you two mind?0
+      - Three is not that many moons0
     - row: []
     - row: []
     - row: []

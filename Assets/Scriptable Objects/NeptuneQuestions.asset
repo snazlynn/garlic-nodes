@@ -14,9 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questions:
     rows:
-    - row: []
-    - row: []
-    - row: []
+    - row:
+      - Why is that?1
+      - Well I am ok being around you1
+      - Oh... I see0
+    - row:
+      - Because I have no where else0
+      - I uhh... am not sure how to prove that0
+    - row:
+      - Would it be alright for me to come back later?0
+      - Ah... well ok then...0
     - row: []
     - row: []
     - row: []

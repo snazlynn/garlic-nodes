@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questions:
     rows:
-    - row: []
-    - row: []
-    - row: []
-    - row: []
-    - row: []
-    - row: []
-    - row: []
+    - row:
+      - lol ur anus0
+      - Yeah, I know you.0
+    - row:
+      - "I\u2019m your newest moon ;)0"
+      - "I\u2019m looking for someone to orbit0"
+      - "I\u2019m Earth\u2019s moon0"
+    - row:
+      - To meet you0
+      - Just exploring0
+      - "I\u2019m looking for someone to orbit0"

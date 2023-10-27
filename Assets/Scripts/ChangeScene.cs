@@ -8,15 +8,18 @@ public class ChangeScene : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        SceneManager.LoadScene(scene);
-
+            SceneManager.LoadScene(scene);
+        
         tracker.lastScene = gameObject.name;
 
-        foreach (var kvp in tracker.rotations)
-        {
-            tracker.rotations[kvp.Key] = GameObject.Find(kvp.Key).GetComponent<Transform>().rotation;
-        }
-
-        tracker.moonRadius = GameObject.Find("Moon").GetComponent<Transform>().position.x;
+        tracker.positions["Mercury"] = GameObject.Find("Mercury").GetComponent<Transform>().position;
+        tracker.positions["Venus"] = GameObject.Find("Venus").GetComponent<Transform>().position;
+        tracker.positions["Earth"] = GameObject.Find("Earth").GetComponent<Transform>().position;
+        tracker.positions["Mars"] = GameObject.Find("Mars").GetComponent<Transform>().position;
+        tracker.positions["Jupiter"] = GameObject.Find("Jupiter").GetComponent<Transform>().position;
+        tracker.positions["Saturn"] = GameObject.Find("Saturn").GetComponent<Transform>().position;
+        tracker.positions["Uranus"] = GameObject.Find("Uranus").GetComponent<Transform>().position;
+        tracker.positions["Neptune"] = GameObject.Find("Neptune").GetComponent<Transform>().position;
+        tracker.positions["Pluto"] = GameObject.Find("Pluto").GetComponent<Transform>().position;
     }
 }
