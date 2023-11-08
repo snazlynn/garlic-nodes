@@ -2823,7 +2823,7 @@
       "DisplayName": "Writing Unity.VisualStudio.Editor.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 111980,
-      "PayloadLength": 36424,
+      "PayloadLength": 36517,
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
       "Outputs": [
@@ -2835,7 +2835,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.rsp2",
       "DisplayName": "Writing Unity.VisualStudio.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 148501,
+      "PayloadOffset": 148594,
       "PayloadLength": 66,
       "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\glase\\OneDr",
       "Inputs": [],
@@ -3061,6 +3061,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll",
         "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll",
+        "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.ref.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll",
         "Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/AssemblyInfo.cs",
@@ -3165,7 +3166,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualStudio.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 148673,
+      "PayloadOffset": 148766,
       "PayloadLength": 7605,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
@@ -3372,7 +3373,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.UnityAdditionalFile.txt",
       "DisplayName": "Writing Assembly-CSharp.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 156384,
+      "PayloadOffset": 156477,
       "PayloadLength": 53,
       "PayloadDebugContentSnippet": "C:\\Users\\glase\\OneDrive\\Docume",
       "Inputs": [],
@@ -3385,8 +3386,8 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp",
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 156523,
-      "PayloadLength": 31241,
+      "PayloadOffset": 156616,
+      "PayloadLength": 31655,
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
       "Outputs": [
@@ -3398,7 +3399,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 187851,
+      "PayloadOffset": 188358,
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -3617,10 +3618,17 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
+        "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll",
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.ref.dll",
         "Assets/Scripts/affinity.cs",
         "Assets/Scripts/ArrayLayout.cs",
         "Assets/Scripts/ChangeScene.cs",
+        "Assets/Scripts/DataPersistence/Data/GameData.cs",
+        "Assets/Scripts/DataPersistence/DataPersistenceManager.cs",
+        "Assets/Scripts/DataPersistence/FileDataHandler.cs",
+        "Assets/Scripts/DataPersistence/IDataPersistence.cs",
+        "Assets/Scripts/DataPersistence/IDataService.cs",
+        "Assets/Scripts/DataPersistence/JSONDataService.cs",
         "Assets/Scripts/DialogueManager.cs",
         "Assets/Scripts/DialogueUI.cs",
         "Assets/Scripts/LeaveConversationUI.cs",
@@ -3686,7 +3694,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 187947,
+      "PayloadOffset": 188454,
       "PayloadLength": 7268,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
@@ -4004,13 +4012,14 @@
     {
       "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json",
       "DisplayName": "BuildPlayerDataGenerator TypeDb-All",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\\nunit.framework.dll\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\" -s=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
+      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\\nunit.framework.dll\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1\\Runtime\\Newtonsoft.Json.dll\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\" -s=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\" -s=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1\\Runtime\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
       "Inputs": [
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/netcorerun/netcorerun.exe",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
         "Library/ScriptAssemblies/Assembly-CSharp.dll",
         "Library/ScriptAssemblies/UnityEngine.TestRunner.dll",
-        "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+        "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll",
+        "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll"
       ],
       "Outputs": [
         "Library/BuildPlayerData/Editor/TypeDb-All.json"
@@ -4158,6 +4167,9 @@
     },
     {
       "File": "Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/csc.rsp"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll"
     },
     {
       "File": "Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/csc.rsp"
