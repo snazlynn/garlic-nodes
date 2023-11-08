@@ -13,7 +13,8 @@ back into an object as long as you pass it the same relative path/name.
 
 
 HOW TO USE
-You can access the singleton in scripts using "JsonDataService.Instance" without quotes of course. Invoke the methods SaveData and LoadData using this instance in order to save and load your data. Details below.
+You can access the singleton in scripts using "JsonDataService.Instance" without quotes of course. Invoke the methods SaveData and LoadData 
+using this instance in order to save and load your data. Details below.
 
 NOTE: As of right now, passing true for encryption changes nothing because it is not implemented :]
 
@@ -23,11 +24,12 @@ NOTE: As of right now, passing true for encryption changes nothing because it is
 boolean SaveData<T>(string RelativeFilePath, T Data, boolean ShouldEncrypt)
 
 RelativeFilePath: 
-The relative path and name that you want to save your file at and as. IT IS STRONGLY RECOMMENDED to use Path.DirectorySeparatorChar instead of hardcoding a / or something. Otherwise it may break on other systems.
+The relative path and name that you want to save your file at and as. IT IS STRONGLY RECOMMENDED to use Path.DirectorySeparatorChar instead 
+of hardcoding a / or something. Otherwise it may break on other systems. The SaveData method itself does not check if you did this.
 
 Data:
-Any object that you wish to save. Can be as simple as an int, or more complicated with multiple parts. Be sure to specify the type
-of the object inside the angle brackets <>.
+Any object that you wish to save. Can be as simple as an int, or more complicated with multiple parts. Be sure to specify the type of the 
+object inside the angle brackets <>.
 
 ShouldEncrypt:
 When encryption is implemented, this will run the serialized data through a simple XOR encyrption algorithm before saving it.
@@ -50,7 +52,8 @@ WasEncrypted:
 Once encryption is implemented, it will be necessary to specify whether we expect to need to decrypt the data.
 
 Return: T
-An object deserialized from the data. This is how you get your data back. The object's type should be specified inside the angle brackets when using the method.
+An object deserialized from the data. This is how you get your data back. The object's type should be specified inside the angle brackets 
+when using the method.
 
 Example use:
 string filePath = Path.DirectorySeparatorChar + "exampleNameToSave.json";
@@ -58,9 +61,11 @@ PlayerName = JsonDataService.LoadData<string>(filePath, false);
 
 
 
-It saves one object to a file. If you use the same file path, I believe it will not add on to the file, it will destructively overwrite it. I'm not cool enough yet to do that. So, I would maybe recommend compiling the data you want to save into a nice little structured object before saving.
+It saves one object to a file. If you use the same file path, it will not add on to the file, it will destructively overwrite it. I'm not 
+cool enough yet to do that. So, I would maybe recommend compiling the data you want to save into a nice little structured object before saving.
 
-You choose when your thing-that-has-data-that-needs-to-be-saved actually loads and saves the data. Saving can probably vary. Loading makes the most sense to me inside of Awaken() but I dunno I don't know Unity terribly well.
+You choose when your thing-that-has-data-that-needs-to-be-saved actually loads and saves the data. Saving can probably vary. Loading makes 
+the most sense to me inside of Awaken() but I dunno I don't know Unity terribly well.
 
 
 

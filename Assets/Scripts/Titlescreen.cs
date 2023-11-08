@@ -6,9 +6,11 @@ using UnityEngine.UIElements;
 
 public class Titlescreen : MonoBehaviour
 {
-    private int numTimesOpened = 0;
+    // These private variables are for testing the file saving and loading system
+    private int numTimesOpened = 0; 
     private string filePath = "" + Path.DirectorySeparatorChar + "intTestFile.json";
 
+    /** Helper method for testing the file saving and loading system */
     private void loadData()
     {
         try
@@ -16,6 +18,7 @@ public class Titlescreen : MonoBehaviour
             numTimesOpened = JsonDataService.Instance.LoadData<int>(filePath, false);
         } catch (Exception e)
         {
+            Debug.Log("Titlescreen: Error loading data. Likely no file found. " + e);
             numTimesOpened = 0;
         }
         numTimesOpened++;
@@ -23,9 +26,7 @@ public class Titlescreen : MonoBehaviour
         Debug.Log($"Times opened: { numTimesOpened } ");
     }
 
-    /**
-     * Some parts added to this method as a test of the file saving and loading system.
-     */
+    /** Some parts added to this method as a test of the file saving and loading system. */
     private void Awake()
     {
         loadData();

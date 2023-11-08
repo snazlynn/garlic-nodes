@@ -6,8 +6,8 @@ using System.Text;
 using UnityEngine;
 
 /**
- * This class handles saving and loading files. This is meant to be a Singleton class.
- */
+ * This class handles saving and loading files. This is meant to be a Singleton class. 
+ * System adapted from tutorial by LlamAcademy: https://www.youtube.com/watch?v=mntS45g8OK4 */
 public class JsonDataService : MonoBehaviour, IDataService
 {
     public static JsonDataService Instance { get; private set; }
@@ -15,13 +15,16 @@ public class JsonDataService : MonoBehaviour, IDataService
     private const string KEY = "ggdPhkeOoiv6YMiPWa34kIuOdDUL7NwQFg6l1DVdwN8=";
     private const string IV = "JZuM0HQsWSBVpRHTeRZMYQ==";
 
-    // This method serializes and saves data to a specified file name or relative path
+    /** This method serializes and saves data to a specified file name or relative path. 
+     * Returns true when it succeeds in writing, false otherwise. */
     public bool SaveData<T>(string RelativePath, T Data, bool Encrypted)
     {
         string path = Application.persistentDataPath + RelativePath;
 
         try
         {
+            // When the file already exists, we completely overwrite it!
+            // I don't know enough about IO to do anything fancy yet.
             if (File.Exists(path))
             {
                 Debug.Log("JsonDataService: Data exists. Deleting old file and writing a new one!");
@@ -31,6 +34,8 @@ public class JsonDataService : MonoBehaviour, IDataService
             {
                 Debug.Log("JsonDataService: Writing file for the first time!");
             }
+
+            // This part actually writes the file
             using FileStream stream = File.Create(path);
             if (Encrypted)
             {
@@ -39,10 +44,11 @@ public class JsonDataService : MonoBehaviour, IDataService
             else
             {
                 stream.Close();
-                File.WriteAllText(path, JsonConvert.SerializeObject(Data));
+                File.WriteAllText(path, JsonConvert.SerializeObject(Data)); // The magical important line that does the writing
             }
             return true;
         }
+
         catch (Exception e)
         {
             Debug.LogError($"JsonDataService: Unable to save data due to: {e.Message} {e.StackTrace}");
@@ -50,6 +56,7 @@ public class JsonDataService : MonoBehaviour, IDataService
         }
     }
 
+    // This method is supposed to encrypt serialized data. Untested
     private void WriteEncryptedData<T>(T Data, FileStream Stream)
     {
         using Aes aesProvider = Aes.Create();
@@ -70,11 +77,15 @@ public class JsonDataService : MonoBehaviour, IDataService
     }
 
 
-    // This method loads and deserializes data from a specified relative path
+    /** This method loads and deserializes data from a specified relative path.
+     * It returns the object it deserialized, or null if it fails I think. 
+     * It also throws some exceptions on certain errors get your catcher's glove */
     public T LoadData<T>(string RelativePath, bool Encrypted)
     {
         string path = Application.persistentDataPath + RelativePath;
 
+        // Can't read it if it doesn't exist.
+        // In this case, you should probably initialize your object to a default value, like at the start of the game.
         if (!File.Exists(path))
         {
             Debug.LogError($"JsonDataService: Cannot load file at {path}. File does not exist!");
@@ -90,17 +101,20 @@ public class JsonDataService : MonoBehaviour, IDataService
             }
             else
             {
-                data = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
+                data = JsonConvert.DeserializeObject<T>(File.ReadAllText(path)); // Magical important line that deserializes data
             }
+            
             return data;
         }
         catch (Exception e)
         {
+            // Some other error we didn't expect lol
             Debug.LogError($"JsonDataService: Failed to load data due to: {e.Message} {e.StackTrace}");
             throw e;
         }
     }
 
+    // This method is supposed to decrypt data. Untested
     private T ReadEncryptedData<T>(string Path)
     {
         byte[] fileBytes = File.ReadAllBytes(Path);
@@ -132,6 +146,8 @@ public class JsonDataService : MonoBehaviour, IDataService
         CreateSingleton();
     }
 
+    /** This method ensures JsonDataService remains a singleton, by creating one, and destoying accidental multiples.
+     The JsonDataService singleton currently gets initialized in the Titlescreen scene by the object SavingAndLoading.*/
     void CreateSingleton()
     {
         if (Instance != null && Instance != this)
