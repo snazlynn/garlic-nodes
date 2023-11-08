@@ -24,12 +24,12 @@ public class JsonDataService : MonoBehaviour, IDataService
         {
             if (File.Exists(path))
             {
-                Debug.Log("Data exists. Deleting old file and writing a new one!");
+                Debug.Log("JsonDataService: Data exists. Deleting old file and writing a new one!");
                 File.Delete(path);
             }
             else
             {
-                Debug.Log("Writing file for the first time!");
+                Debug.Log("JsonDataService: Writing file for the first time!");
             }
             using FileStream stream = File.Create(path);
             if (Encrypted)
@@ -45,7 +45,7 @@ public class JsonDataService : MonoBehaviour, IDataService
         }
         catch (Exception e)
         {
-            Debug.LogError($"Unable to save data due to: {e.Message} {e.StackTrace}");
+            Debug.LogError($"JsonDataService: Unable to save data due to: {e.Message} {e.StackTrace}");
             return false;
         }
     }
@@ -77,7 +77,7 @@ public class JsonDataService : MonoBehaviour, IDataService
 
         if (!File.Exists(path))
         {
-            Debug.LogError($"Cannot load file at {path}. File does not exist!");
+            Debug.LogError($"JsonDataService: Cannot load file at {path}. File does not exist!");
             throw new FileNotFoundException($"{path} does not exist!");
         }
 
@@ -96,7 +96,7 @@ public class JsonDataService : MonoBehaviour, IDataService
         }
         catch (Exception e)
         {
-            Debug.LogError($"Failed to load data due to: {e.Message} {e.StackTrace}");
+            Debug.LogError($"JsonDataService: Failed to load data due to: {e.Message} {e.StackTrace}");
             throw e;
         }
     }
@@ -123,7 +123,7 @@ public class JsonDataService : MonoBehaviour, IDataService
 
         string result = reader.ReadToEnd();
 
-        Debug.Log($"Decrypted result (if the following is not legible, probably wrong key or iv): {result}");
+        Debug.Log($"JsonDataService: Decrypted result (if the following is not legible, probably wrong key or iv): {result}");
         return JsonConvert.DeserializeObject<T>(result);
     }
 

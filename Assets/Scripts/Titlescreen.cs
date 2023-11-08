@@ -23,12 +23,16 @@ public class Titlescreen : MonoBehaviour
         Debug.Log($"Times opened: { numTimesOpened } ");
     }
 
+    /**
+     * Some parts added to this method as a test of the file saving and loading system.
+     */
     private void Awake()
     {
+        loadData();
+
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         root.Q<Button>("Play").clicked += () =>
         {
-            // TODO Does this work lol
             try
             {
                 JsonDataService.Instance.SaveData<int>(filePath, numTimesOpened, false);
