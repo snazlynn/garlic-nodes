@@ -335,6 +335,7 @@
 "Assets/Scripts/DialogueUI.cs"
 "Assets/Scripts/LeaveConversationUI.cs"
 "Assets/Scripts/orbitalMovement.cs"
+"Assets/Scripts/OrbitPlanet.cs"
 "Assets/Scripts/Questions.cs"
 "Assets/Scripts/rotate.cs"
 "Assets/Scripts/Sentences.cs"
