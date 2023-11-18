@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LeaveConversationUI : MonoBehaviour
 {
-    private void OnEnable() 
+    private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
