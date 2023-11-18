@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1b58d2dc3cdf744afd0b9b6a597489, type: 3}
+  m_Name: PlutoSentences
+  m_EditorClassIdentifier: 
+  planetName: Pluto
+  sentences:
+    rows:
+    - row:
+      - uh....hi?0
+      - Hey shorty. You new around here?1
+    - row:
+      - Sh...shorty?0
+      - "Well yeah cause, you, uh...you know...you\u2019re kinda short...1"
+      - .......1
+      - "(A torturous silence fills the metaphorical air as you stare into each other\u2019s
+        eyes. The urge to scream boils in your throat, and looking closer, you see
+        he feels it too.)2"
+      - ......................0
+      - .............................1
+      - (Ironically, more words are said now than in any conversation you two could
+        have ever had before this moment.)2
+      - ......................................................................0
+      - "GAH!!! I can\u2019t take it anymore!1"
+      - "Fine, it was an act, I admit it! I just- I didn\u2019t know what to say.
+        You\u2019re so much bigger than me and I...well....what do you want?!?1"
+    - row:
+      - .......1
+      - "(A torturous silence fills the metaphorical air as you stare into each other\u2019s
+        eyes. The urge to scream boils in your throat, and looking closer, you see
+        he feels it too.)2"
+      - ......................0
+      - .............................1
+      - (Ironically, more words are said now than in any conversation you two could
+        have ever had before this moment.)2
+      - ......................................................................0
+      - "GAH!!! I can\u2019t take it anymore!1"
+      - "Fine, it was an act, I admit it! I just- I didn\u2019t know what to say.
+        You\u2019re so much bigger than me and I...well....what do you want?!?1"
+    - row:
+      - (Your mind focuses in on his every movement - not even the lowest tides of
+        his oceans escape your gaze.)2
+      - "(There is a rhythmic rocking to his orbit interrupted every so often by
+        slight twitches, like one of earth\u2019s insufferable human babies being
+        calmed down from a tantrum. Is...is he nervous?)2"
+      - Are you okay? You, um... You look shaken up.0
+      - "What? No I\u2019m not! I\u2019m fine. I\u2019m big. I uh...I.....um.1"
+      - .......1
+      - "(A torturous silence fills the metaphorical air as you stare into each other\u2019s
+        eyes. The urge to scream boils in your throat, and looking closer, you see
+        he feels it too.)2"
+      - ......................0
+      - .............................1
+      - (Ironically, more words are said now than in any conversation you two could
+        have ever had before this moment.)2
+      - ......................................................................0
+      - "GAH!!! I can\u2019t take it anymore!1"
+      - "Fine, it was an act, I admit it! I just- I didn\u2019t know what to say.
+        You\u2019re so much bigger than me and I...well....what do you want?!?1"
+    - row:
+      - "Oh, another asteroid? You\u2019d have more luck further into the system.
+        There\u2019s nothing worth orbiting out here.1"
+      - Just me and a bunch of other loose rocks, like those squatters from the Kuiper
+        belt.1
+      - Wait a minute.1
+      - "Aren\u2019t you earth\u2019s moon? Why\u2019re you out here? Did something
+        happen between you two?1"
+    - row:
+      - What, are you trying to become a planet?1
+      - "I wouldn\u2019t count on it if you are. Only big guys like Jupiter or Earth
+        can be one.1"
+      - "I\u2019d say I have a chance.0"
+      - Trust me, so did I, and then those jerks at NASA demoted me to-1
+      - Wait a minute.1
+      - "Aren\u2019t you earth\u2019s moon? Why\u2019re you out here? Did something
+        happen between you two?1"
+    - row:
+      - "...Please don\u2019t do this to me.1"
+      - <Remain silent. You chose this path.>0
+      - "Well fine, if you\u2019re gonna be like that I guess I\u2019ll just-1"
+      - Wait a minute.1
+      - "Aren\u2019t you earth\u2019s moon? Why\u2019re you out here? Did something
+        happen between you two?1"
+    - row:
+      - Can I ask what kind of stuff?1
+      - Just being mean in general.0
+      - Oh man, I had no idea. Sorry he was like that.1
+      - "My orbit\u2019s a little wonky so I don\u2019t really get much news about
+        the planets.1"
+    - row:
+      - Oh man, I had no idea. Sorry he was like that.1
+      - "My orbit\u2019s a little wonky so I don\u2019t really get much news about
+        the planets.1"
+    - row: []
+    - row:
+      - "Oh, um...really?!? You\u2019d...you\u2019d really do that for me?!?1"
+      - I would, yes.0
+      - "I, uh, wow, I don\u2019t know what to say! Thank you!1"
+      - "I think Venus is who to go to for news from what I\u2019ve heard? Well,
+        anyways, good luck on your search!1"
+    - row:
+      - "Thanks. It\u2019s tough, but I manage.1"
+      - Good luck on your search. It was nice to have some company for a change.1
+      - Bye!1
+    - row:
+      - "Hey it\u2019s not my fault, okay?!? I didn\u2019t even do anything wrong.1"
+      - What even is a golfball? Oh, whatever.1
+      - Good luck on your search.1

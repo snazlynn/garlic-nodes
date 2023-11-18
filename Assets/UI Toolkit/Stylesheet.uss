@@ -1,5 +1,6 @@
 .button {
-    align-items: auto;
+    position: absolute;
+    bottom: 10%;
     width: 160px;
     height: 65px;
     font-size: 24px;
@@ -8,15 +9,44 @@
     border-right-width: 5px;
     border-bottom-width: 5px;
     border-left-width: 5px;
-    border-left-color: rgb(0, 0, 0);
-    border-right-color: rgb(0, 0, 0);
-    border-top-color: rgb(0, 0, 0);
-    border-bottom-color: rgb(0, 0, 0);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    justify-content: flex-start;
     align-self: center;
-    translate: 0 800px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+}
+
+.dialogueBox {
+    align-self: center;
+    background-color: rgba(58, 27, 91, 0.78);
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    border-left-color: rgba(185, 185, 185, 0);
+    border-right-color: rgba(185, 185, 185, 0);
+    border-top-color: rgba(185, 185, 185, 0);
+    border-bottom-color: rgba(185, 185, 185, 0);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: rgb(169, 230, 248);
+}
+
+.dialogueText {
+    color: rgb(169, 230, 248);
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
 }

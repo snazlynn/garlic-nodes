@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b96ec8ef5be44548bd4a38bd6a3447b, type: 3}
+  m_Name: PlutoQuestions
+  m_EditorClassIdentifier: 
+  questions:
+    rows:
+    - row:
+      - "Shorty? Aren\u2019t you smaller than me?0"
+      - <Say nothing and stare at him>0
+      - '[Try and read his body language.  Well...the planet equivalent of it.]0'
+    - row:
+      - "I\u2019m looking for a new planet to orbit.0"
+      - "I\u2019m new to the system, just got a little lost.0"
+      - <Remain silent>0
+    - row:
+      - Nothing in particular, just a lot of stuff that built up over time. I got
+        fed up and left to find a new planet to orbit.0
+      - Yeah, he was a prick so I left him to find another planet to orbit.0
+    - row:
+      - "I could visit again later and bring you news about them, if you\u2019d like?2"
+      - "I\u2019m sorry that happened to you.1"
+      - Sucks to suck, golfball boy.0
+    - row: []
+    - row: []
+    - row: []

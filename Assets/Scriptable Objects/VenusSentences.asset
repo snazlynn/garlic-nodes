@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1b58d2dc3cdf744afd0b9b6a597489, type: 3}
+  m_Name: VenusSentences
+  m_EditorClassIdentifier: 
+  planetName: Venus
+  sentences:
+    rows:
+    - row:
+      - Well hello, darling.1
+      - "Earth\u2019s moon, yes? If you\u2019re this far from that infested little
+        rock something real exciting must have gone down.1"
+    - row:
+      - "Who? I don\u2019t know any earth.0"
+      - Oh, darling, I already know who you are, no need to be so evasive.1
+      - "Judging by your craters you\u2019re not very good at it in the first place.1"
+      - "Anyways, if you\u2019re here on my orbit you\u2019re here on business.1"
+      - So what business brought you to me, my cratered little friend?1
+    - row:
+      - Oh, uh, yeah, we broke up.0
+      - "Goodness, really?!? I can\u2019t imagine why that would be.1"
+      - (He knows. He definitely knows.)0
+      - "Anyways, if you\u2019re here on my orbit you\u2019re here on business.1"
+      - So what business brought you to me, my cratered little friend?1
+    - row: []
+    - row:
+      - I wanted to know more about the other planets.0
+      - "Since I\u2019m not really, uh....well traveled?0"
+      - "Of course, of course, darling. I assume you want some profiles on yor potential
+        new orbiting prospects? I\u2019ll give you the rundown.1"
+      - "Let\u2019s see....Mercury\u2019s a shallow little wretch, but dedicated
+        nonetheless. Although, to catch his eyes you\u2019d need to shine brighter
+        than the sun.1"
+      - "Earth is...well, you know. I can\u2019t imagine why you\u2019d ever orbit
+        him to begin with.1"
+      - "If you were interested in getting back with him again after the humans are
+        gone, don\u2019t bother. He\u2019s tried that whole yellowstone business
+        before already.1"
+      - "It didn\u2019t work, if you were wondering.1"
+      - "Mars is a kind fellow, not a bad choice for any would-be orbiters. Of course,
+        that doesn\u2019t apply to company he keeps.1"
+      - Phobos and Deimos are ravenous little monsters, if I may say so.1
+      - "Jupiter\u2019s not bad, but his moons are even worse than Mars. I\u2019d
+        say more if they wouldn\u2019t try to eat me alive when I do.1"
+      - Saturn is a similar case. Very similar, actually. Down to both being vain
+        about their special little traits.1
+      - "Oh, that reminds me. That spot Jupiter\u2019s so proud of? I think it\u2019s
+        malignant.1"
+      - "Uranus should be avoided at all costs. I don\u2019t know what his moons
+        see in him.1"
+      - "Really, it\u2019s a miracle he even counts as a planet at all. They really
+        should update those requirements at NASA.1"
+      - Neptune is....well nothing, really. And I do mean nothing. He could be a
+        black hole if he wanted with that personality.1
+      - "That\u2019s about all there is to everyone. The sun\u2019s off limits for
+        someone like you so I won\u2019t bother.1"
+      - What about pluto?0
+      - "Pluto? Please, you\u2019re looking to BE a moon, not get one.1"
+      - "Even if Pluto accepts you, you\u2019d be miserable. He is, at least.1"
+      - "So caught up with that whole \u201Cdwarf planet\u201D business. I doubt
+        he even knows why he\u2019s excluded.1"
+      - Well, this has been fun, but I do need to get back to, ah, important things.1
+      - Ta-ta!1
+    - row:
+      - "I\u2019m looking to orbit a new planet.0"
+      - Well, certainly not me, I hope.1
+      - I have standards.1
+      - "But I do know some lovely neighborhood fellows who\u2019d be just perfect
+        for you! Minus some potential, ah, availability conflicts.1"
+      - "Let\u2019s see....Mercury\u2019s a shallow little wretch, but dedicated
+        nonetheless. Although, to catch his eyes you\u2019d need to shine brighter
+        than the sun.1"
+      - "Earth is...well, you know. I can\u2019t imagine why you\u2019d ever orbit
+        him to begin with.1"
+      - "If you were interested in getting back with him again after the humans are
+        gone, don\u2019t bother. He\u2019s tried that whole yellowstone business
+        before already.1"
+      - "It didn\u2019t work, if you were wondering.1"
+      - "Mars is a kind fellow, not a bad choice for any would-be orbiters. Of course,
+        that doesn\u2019t apply to company he keeps.1"
+      - Phobos and Deimos are ravenous little monsters, if I may say so.1
+      - "Jupiter\u2019s not bad, but his moons are even worse than Mars. I\u2019d
+        say more if they wouldn\u2019t try to eat me alive when I do.1"
+      - Saturn is a similar case. Very similar, actually. Down to both being vain
+        about their special little traits.1
+      - "Oh, that reminds me. That spot Jupiter\u2019s so proud of? I think it\u2019s
+        malignant.1"
+      - "Uranus should be avoided at all costs. I don\u2019t know what his moons
+        see in him.1"
+      - "Really, it\u2019s a miracle he even counts as a planet at all. They really
+        should update those requirements at NASA.1"
+      - Neptune is....well nothing, really. And I do mean nothing. He could be a
+        black hole if he wanted with that personality.1
+      - "That\u2019s about all there is to everyone. The sun\u2019s off limits for
+        someone like you so I won\u2019t bother.1"
+      - What about pluto?0
+      - "Pluto? Please, you\u2019re looking to BE a moon, not get one.1"
+      - "Even if Pluto accepts you, you\u2019d be miserable. He is, at least.1"
+      - "So caught up with that whole \u201Cdwarf planet\u201D business. I doubt
+        he even knows why he\u2019s excluded.1"
+      - Well, this has been fun, but I do need to get back to, ah, important things.1
+      - Ta-ta!1
+    - row:
+      - Do you have to keep mentioning my craters?0
+      - Yes!1
+      - Are you...going to elaborate?0
+      - Nope!1
+      - Anything else?1
+      - I wanted to know more about the other planets.0
+      - "Since I\u2019m not really, uh....well traveled?0"
+      - "Of course, of course, darling. I assume you want some profiles on yor potential
+        new orbiting prospects? I\u2019ll give you the rundown.1"
+      - "Let\u2019s see....Mercury\u2019s a shallow little wretch, but dedicated
+        nonetheless. Although, to catch his eyes you\u2019d need to shine brighter
+        than the sun.1"
+      - "Earth is...well, you know. I can\u2019t imagine why you\u2019d ever orbit
+        him to begin with.1"
+      - "If you were interested in getting back with him again after the humans are
+        gone, don\u2019t bother. He\u2019s tried that whole yellowstone business
+        before already.1"
+      - "It didn\u2019t work, if you were wondering.1"
+      - "Mars is a kind fellow, not a bad choice for any would-be orbiters. Of course,
+        that doesn\u2019t apply to company he keeps.1"
+      - Phobos and Deimos are ravenous little monsters, if I may say so.1
+      - "Jupiter\u2019s not bad, but his moons are even worse than Mars. I\u2019d
+        say more if they wouldn\u2019t try to eat me alive when I do.1"
+      - Saturn is a similar case. Very similar, actually. Down to both being vain
+        about their special little traits.1
+      - "Oh, that reminds me. That spot Jupiter\u2019s so proud of? I think it\u2019s
+        malignant.1"
+      - "Uranus should be avoided at all costs. I don\u2019t know what his moons
+        see in him.1"
+      - "Really, it\u2019s a miracle he even counts as a planet at all. They really
+        should update those requirements at NASA.1"
+      - Neptune is....well nothing, really. And I do mean nothing. He could be a
+        black hole if he wanted with that personality.1
+      - "That\u2019s about all there is to everyone. The sun\u2019s off limits for
+        someone like you so I won\u2019t bother.1"
+      - What about pluto?0
+      - "Pluto? Please, you\u2019re looking to BE a moon, not get one.1"
+      - "Even if Pluto accepts you, you\u2019d be miserable. He is, at least.1"
+      - "So caught up with that whole \u201Cdwarf planet\u201D business. I doubt
+        he even knows why he\u2019s excluded.1"
+      - Well, this has been fun, but I do need to get back to, ah, important things.1
+      - Ta-ta!1
+    - row:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 

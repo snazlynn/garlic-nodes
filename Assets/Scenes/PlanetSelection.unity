@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 73782241}
   - component: {fileID: 73782240}
   - component: {fileID: 73782243}
-  - component: {fileID: 73782242}
+  - component: {fileID: 73782244}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Planet
@@ -182,10 +182,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bdfd828f7a0af734e89e2824003d6242, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 531e8daec6a952243b34f43ea680c66b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -203,13 +203,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73782237}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 72, y: 0, z: 0}
-  m_LocalScale: {x: 73.753265, y: 73.753265, z: 73.753265}
+  m_LocalScale: {x: 39.20281, y: 39.20281, z: 39.20281}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &73782240
 MonoBehaviour:
@@ -223,8 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: 10
+  respawnAngle: -8
 --- !u!114 &73782241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,19 +237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -37
---- !u!114 &73782242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73782237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Uranus
 --- !u!61 &73782243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -283,19 +269,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004630754, y: 0.01505002}
+  m_Offset: {x: -0.013779201, y: -0.0033598952}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.07243073, y: 0.07209968}
+  m_Size: {x: 0.21289156, y: 0.20437852}
   m_EdgeRadius: 0
+--- !u!114 &73782244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73782237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Uranus
 --- !u!1 &252214970
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +308,7 @@ GameObject:
   - component: {fileID: 252214972}
   - component: {fileID: 252214971}
   - component: {fileID: 252214976}
-  - component: {fileID: 252214975}
+  - component: {fileID: 252214977}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Planet
@@ -329,8 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: 5
+  respawnAngle: 18
 --- !u!114 &252214972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,10 +380,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 04ccf5d39e5df8f49b4ed6eed6f5d09a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 440a912f0f26f034e87a7d3203212a3c, type: 3}
   m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -403,27 +401,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252214970}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12, y: 0, z: 0}
-  m_LocalScale: {x: 42.071514, y: 42.071514, z: 42.071514}
+  m_LocalScale: {x: 14.925712, y: 14.925712, z: 14.925712}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &252214975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252214970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Mercury
 --- !u!61 &252214976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -456,19 +441,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004982736, y: -0.00993014}
+  m_Offset: {x: 0.012146324, y: -0.0063483417}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.051242895, y: 0.0408122}
+  m_Size: {x: 0.14436963, y: 0.13393886}
   m_EdgeRadius: 0
+--- !u!114 &252214977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252214970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Mercury
 --- !u!1 &371606888
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +480,7 @@ GameObject:
   - component: {fileID: 371606890}
   - component: {fileID: 371606889}
   - component: {fileID: 371606894}
-  - component: {fileID: 371606893}
+  - component: {fileID: 371606895}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Planet
@@ -502,8 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: -5
+  respawnAngle: -11
 --- !u!114 &371606890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,10 +552,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 16c8070eb7efedd48ad9218020d66816, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3704842fc0733dd4daf3aafcbfac7907, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -576,27 +573,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371606888}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42, y: 0, z: 0}
-  m_LocalScale: {x: 42.164932, y: 42.164932, z: 42.164932}
+  m_LocalScale: {x: 22.785086, y: 22.785086, z: 22.785086}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &371606893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371606888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Mars
 --- !u!61 &371606894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -629,19 +613,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000052154064, y: 0.0005785618}
+  m_Offset: {x: -0.004692577, y: 0.005271174}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06857227, y: 0.065100804}
+  m_Size: {x: 0.1342688, y: 0.12610483}
   m_EdgeRadius: 0
+--- !u!114 &371606895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371606888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Mars
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +650,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -726,14 +724,110 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4.6341352}
   m_LocalScale: {x: 0.88530517, y: 0.88530517, z: 0.88530517}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1335727079}
-  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &519420033
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c84986d9b3ff33d4fb4d5b4f699dc879, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &818788078
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +841,7 @@ GameObject:
   - component: {fileID: 818788082}
   - component: {fileID: 818788081}
   - component: {fileID: 818788084}
-  - component: {fileID: 818788083}
+  - component: {fileID: 818788085}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Planet
@@ -793,10 +887,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 10eb4580599d2df4999bcd9ac6caa43e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d53f92b4d344db49ba842457bbb0e1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -814,13 +908,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818788078}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 62, y: 0, z: 0}
-  m_LocalScale: {x: 51.539932, y: 51.539932, z: 51.539932}
+  m_LocalScale: {x: 23.295534, y: 23.295534, z: 23.295534}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &818788081
 MonoBehaviour:
@@ -834,8 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: -10
+  respawnAngle: -7
 --- !u!114 &818788082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,19 +942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -20
---- !u!114 &818788083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818788078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Saturn
 --- !u!61 &818788084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -894,19 +974,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004969923, y: 0.00023667514}
+  m_Offset: {x: 0.021034203, y: -0.000910759}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.113034874, y: 0.12439494}
+  m_Size: {x: 0.2644981, y: 0.25520402}
   m_EdgeRadius: 0
+--- !u!114 &818788085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818788078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Jupiter
 --- !u!1 &911099441
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,10 +1056,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1533071453
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aee29f3cea2f555458317acb0ecfe48a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ada3193457138a489dc4d6120ca7caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -984,13 +1077,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911099441}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.96, y: 3.96, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &911099444
 MonoBehaviour:
@@ -1018,6 +1111,7 @@ GameObject:
   - component: {fileID: 1335727080}
   - component: {fileID: 1335727081}
   - component: {fileID: 1335727082}
+  - component: {fileID: 1335727083}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -1063,10 +1157,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1455429851
+  m_SortingLayerID: 219135621
   m_SortingLayer: 3
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: d0d3155795403bf49b51735f6283be2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71b8a46825829a342b8f91ffb6fc4256, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1084,14 +1178,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335727077}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32, y: 0, z: 0}
-  m_LocalScale: {x: 2.1579, y: 2.1579, z: 2.1579}
+  m_LocalPosition: {x: 32, y: 0, z: 45.322}
+  m_LocalScale: {x: 13.811639, y: 13.811639, z: 13.811639}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1335727080
 MonoBehaviour:
@@ -1138,10 +1232,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0010964479, y: 0.020280506}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.54}
     oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 0.6, y: 0.6}
     adaptiveTilingThreshold: 0.5
@@ -1149,7 +1243,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.10888256, y: 0.1077865}
   m_EdgeRadius: 0
 --- !u!50 &1335727082
 Rigidbody2D:
@@ -1178,6 +1272,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &1335727083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335727077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c2c31d86795b449bef5964aa078ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1347448861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1343,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: a7f62241f0049234dbfd3ae480f59045, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8337c49bf51b3a74d84285baa484d569, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1255,13 +1361,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347448861}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.75174, y: 0.1716, z: 0}
-  m_LocalScale: {x: 82.189316, y: 82.189316, z: 82.189316}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 63.37801, y: 63.37801, z: 63.37801}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1347448864
 MonoBehaviour:
@@ -1289,7 +1395,7 @@ GameObject:
   - component: {fileID: 1632644334}
   - component: {fileID: 1632644333}
   - component: {fileID: 1632644338}
-  - component: {fileID: 1632644337}
+  - component: {fileID: 1632644339}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Planet
@@ -1309,8 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: -10
+  respawnAngle: -13
 --- !u!114 &1632644334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,10 +1467,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 73d2100722d5eaa419fd813355dc8da9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 859d03b250727e545b452196080f5d18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1383,27 +1488,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632644332}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 52, y: 0, z: 0}
-  m_LocalScale: {x: 72.340546, y: 72.340546, z: 72.340546}
+  m_LocalScale: {x: 30.139965, y: 30.139965, z: 30.139965}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1632644337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632644332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Jupiter
 --- !u!61 &1632644338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1436,19 +1528,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00016864389, y: -0.000000027939677}
+  m_Offset: {x: 0.0024919063, y: 0.0008868575}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12295462, y: 0.1246409}
+  m_Size: {x: 0.31629375, y: 0.32152748}
   m_EdgeRadius: 0
+--- !u!114 &1632644339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632644332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Jupiter
 --- !u!1 &1725184361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,7 +1567,7 @@ GameObject:
   - component: {fileID: 1725184365}
   - component: {fileID: 1725184364}
   - component: {fileID: 1725184367}
-  - component: {fileID: 1725184366}
+  - component: {fileID: 1725184368}
   m_Layer: 0
   m_Name: Pluto
   m_TagString: Planet
@@ -1508,10 +1613,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dd1c43b588f7e9d478d8ad7db965a160, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79e290b160b93de429465ae07a27e12c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1529,13 +1634,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725184361}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 92, y: 0, z: 0}
-  m_LocalScale: {x: 37.379196, y: 37.379196, z: 37.379196}
+  m_LocalScale: {x: 19.925035, y: 19.925035, z: 19.925035}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1725184364
 MonoBehaviour:
@@ -1549,8 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: -5
+  respawnAngle: -2
 --- !u!114 &1725184365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,19 +1668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -25
---- !u!114 &1725184366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725184361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Pluto
 --- !u!61 &1725184367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1609,19 +1700,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0055474266, y: 0.0039158724}
+  m_Offset: {x: 0.008109901, y: -0.0012088474}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05656323, y: 0.05460553}
+  m_Size: {x: 0.118059926, y: 0.10585271}
   m_EdgeRadius: 0
+--- !u!114 &1725184368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725184361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Pluto
 --- !u!1 &1804473503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,8 +1738,8 @@ GameObject:
   - component: {fileID: 1804473505}
   - component: {fileID: 1804473504}
   - component: {fileID: 1804473508}
-  - component: {fileID: 1804473507}
   - component: {fileID: 1804473509}
+  - component: {fileID: 1804473510}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Planet
@@ -1694,10 +1798,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 645ba05567203c247bbefb6083a219e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b288c4abfc223b4f8e169d3653eada4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1715,27 +1819,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804473503}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32, y: -3.2, z: 0}
-  m_LocalScale: {x: 33.08199, y: 33.08199, z: 33.08199}
+  m_LocalScale: {x: 15.537618, y: 15.537618, z: 15.537618}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1804473507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804473503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Earth
 --- !u!61 &1804473508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1768,18 +1859,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0011834428, y: 0.00059173256}
+  m_Offset: {x: -0.005698003, y: -0.004569374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06448592, y: 0.06448592}
+  m_Size: {x: 0.16770817, y: 0.16426726}
   m_EdgeRadius: 0
 --- !u!114 &1804473509
 MonoBehaviour:
@@ -1793,8 +1884,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: -5
+  respawnAngle: -11
+--- !u!114 &1804473510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804473503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Earth
 --- !u!1 &1820766521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,7 +1911,7 @@ GameObject:
   - component: {fileID: 1820766523}
   - component: {fileID: 1820766522}
   - component: {fileID: 1820766527}
-  - component: {fileID: 1820766526}
+  - component: {fileID: 1820766528}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Planet
@@ -1828,8 +1931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: 5
+  respawnAngle: -12
 --- !u!114 &1820766523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1881,10 +1983,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 08a2d057d7e0d354bb22354a47348ba9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb668bac2e98f944e813ae00bff0378a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1902,27 +2004,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820766521}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22, y: 0, z: 0}
-  m_LocalScale: {x: 41.56885, y: 41.56885, z: 41.56885}
+  m_LocalScale: {x: 19.523642, y: 19.523642, z: 19.523642}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1820766526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820766521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Venus
 --- !u!61 &1820766527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1955,19 +2044,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004900666, y: 0.00019063056}
+  m_Offset: {x: 0.006269783, y: 0.0029288977}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05359942, y: 0.063242}
+  m_Size: {x: 0.16586822, y: 0.16181943}
   m_EdgeRadius: 0
+--- !u!114 &1820766528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820766521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Venus
 --- !u!1 &2016272350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,7 +2083,7 @@ GameObject:
   - component: {fileID: 2016272354}
   - component: {fileID: 2016272353}
   - component: {fileID: 2016272356}
-  - component: {fileID: 2016272355}
+  - component: {fileID: 2016272357}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Planet
@@ -2027,10 +2129,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 153bc53a4ce57a346b774ea81f8d2944, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f08d9f0859cabc347aba03233ea31082, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2048,13 +2150,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016272350}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 82, y: 0, z: 0}
-  m_LocalScale: {x: 84.62878, y: 84.62878, z: 84.62878}
+  m_LocalScale: {x: 36.00785, y: 36.00785, z: 36.00785}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2016272353
 MonoBehaviour:
@@ -2068,8 +2170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31d82fc75e5e4c42bddf6195f9e076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
-  respawnAngle: -10
+  respawnAngle: -6
 --- !u!114 &2016272354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,19 +2184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -25
---- !u!114 &2016272355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016272350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2865f2f37b675c742b45f5b32480621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Neptune
 --- !u!61 &2016272356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2128,19 +2216,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005044535, y: 0.0050446056}
+  m_Offset: {x: 0.010007311, y: -0.0027537718}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.3}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.07198411, y: 0.071983986}
+  m_Size: {x: 0.21802661, y: 0.20951913}
   m_EdgeRadius: 0
+--- !u!114 &2016272357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016272350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d12639315fe9143aaba974cfd6f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Neptune
 --- !u!1 &2018823633
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,11 +2298,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223062081
+  m_SortingLayerID: 153881841
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d7c2815599530634d9f80fd510213d4b, type: 3}
-  m_Color: {r: 0.8113208, g: 0.37189764, b: 0.095674604, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1ac332aa8c9d8604a941aa44402e95ab, type: 3}
+  m_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2218,13 +2319,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018823633}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.76, z: 0}
-  m_LocalScale: {x: 202.875, y: 202.875, z: 0}
+  m_LocalPosition: {x: 0, y: -0.04, z: 0}
+  m_LocalScale: {x: 28.93606, y: 28.93606, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2018823636
 MonoBehaviour:
@@ -2239,3 +2340,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -30
+--- !u!1 &2043981723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043981725}
+  - component: {fileID: 2043981724}
+  m_Layer: 0
+  m_Name: tracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2043981724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043981723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f202112e3c262db429b9258befb01fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2043981725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043981723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.019397318, y: -3.331963, z: -4.429357}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 2043981725}
+  - {fileID: 1347448863}
+  - {fileID: 911099443}
+  - {fileID: 2018823635}
+  - {fileID: 252214974}
+  - {fileID: 1820766525}
+  - {fileID: 1804473506}
+  - {fileID: 1335727079}
+  - {fileID: 371606892}
+  - {fileID: 1632644336}
+  - {fileID: 818788080}
+  - {fileID: 73782239}
+  - {fileID: 2016272352}
+  - {fileID: 1725184363}

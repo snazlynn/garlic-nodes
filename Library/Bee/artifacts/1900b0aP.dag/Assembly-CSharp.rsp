@@ -300,14 +300,20 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Scripts/affinity.cs"
+"Assets/Scripts/ArrayLayout.cs"
 "Assets/Scripts/ChangeScene.cs"
-"Assets/Scripts/freeMovement.cs"
+"Assets/Scripts/DialogueManager.cs"
+"Assets/Scripts/DialogueUI.cs"
 "Assets/Scripts/LeaveConversationUI.cs"
-"Assets/Scripts/movement.cs"
 "Assets/Scripts/orbitalMovement.cs"
+"Assets/Scripts/Questions.cs"
 "Assets/Scripts/rotate.cs"
-"Assets/Scripts/rotateBackground.cs"
+"Assets/Scripts/Sentences.cs"
+"Assets/Scripts/spawnMoon.cs"
 "Assets/Scripts/spawnPlanet.cs"
+"Assets/Scripts/Titlescreen.cs"
+"Assets/Scripts/tracker.cs"
 -langversion:9.0
 
 /deterministic
