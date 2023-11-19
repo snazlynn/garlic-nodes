@@ -325,6 +325,8 @@
 "Assets/Scripts/Map/SpawnMoon.cs"
 "Assets/Scripts/Map/SpawnPlanet.cs"
 "Assets/Scripts/Map/Tracker.cs"
+"Assets/Scripts/Music/FadeIn.cs"
+"Assets/Scripts/Music/FadeOut.cs"
 "Assets/Scripts/Music/KeepBetweenScenes.cs"
 -langversion:9.0
 

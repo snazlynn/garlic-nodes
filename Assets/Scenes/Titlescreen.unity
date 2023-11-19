@@ -219,8 +219,8 @@ GameObject:
   - component: {fileID: 915672778}
   - component: {fileID: 915672775}
   m_Layer: 0
-  m_Name: Audio Source
-  m_TagString: Untagged
+  m_Name: bg music
+  m_TagString: bgTheme
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,11 +247,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c84986d9b3ff33d4fb4d5b4f699dc879, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bd4dd24427740c040917cf720fc5bd59, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

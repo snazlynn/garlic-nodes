@@ -59,28 +59,31 @@
     <UnityVersion>2022.3.11f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Users\Alex Schrader\.vscode\extensions\visualstudiotoolsforunity.vstuc-0.9.3\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.11f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.11f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Map\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Map\Orbit.cs" />
     <Compile Include="Assets\Scripts\Dialogue\ArrayLayout.cs" />
+    <Compile Include="Assets\Scripts\Map\ChangeSceneGrav.cs" />
+    <Compile Include="Assets\Scripts\Map\Tracker.cs" />
+    <Compile Include="Assets\Scripts\Music\FadeIn.cs" />
+    <Compile Include="Assets\Scripts\Map\ChangeScene.cs" />
+    <Compile Include="Assets\Scripts\Music\KeepBetweenScenes.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\LeaveConversationUI.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Questions.cs" />
+    <Compile Include="Assets\Scripts\Music\FadeOut.cs" />
+    <Compile Include="Assets\Scripts\Map\Orbit.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\Map\Gravity.cs" />
     <Compile Include="Assets\Scripts\Map\Rotate.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\Map\ChangeSceneGrav.cs" />
-    <Compile Include="Assets\Scripts\Map\Tracker.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Titlescreen.cs" />
     <Compile Include="Assets\Scripts\Map\CameraController.cs" />
     <Compile Include="Assets\Scripts\Map\SpawnMoon.cs" />
-    <Compile Include="Assets\Scripts\Map\ChangeScene.cs" />
-    <Compile Include="Assets\Scripts\Music\KeepBetweenScenes.cs" />
     <Compile Include="Assets\Scripts\Map\SpawnPlanet.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\LeaveConversationUI.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Sentences.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\Questions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\Stylesheet.uss" />
