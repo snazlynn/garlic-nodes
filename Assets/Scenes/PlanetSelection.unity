@@ -1006,7 +1006,6 @@ GameObject:
   - component: {fileID: 1335727081}
   - component: {fileID: 1335727082}
   - component: {fileID: 1335727083}
-  - component: {fileID: 1335727084}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -1179,20 +1178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c2c31d86795b449bef5964aa078ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1335727084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335727077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbd1e2277106df54b8cd716fb6037636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeOutTime: 3
-  allTheme: []
 --- !u!1 &1347448861
 GameObject:
   m_ObjectHideFlags: 0

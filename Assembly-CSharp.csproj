@@ -72,8 +72,8 @@
     <Compile Include="Assets\Scripts\Map\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Music\KeepBetweenScenes.cs" />
     <Compile Include="Assets\Scripts\Dialogue\LeaveConversationUI.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\Questions.cs" />
     <Compile Include="Assets\Scripts\Music\FadeOut.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Questions.cs" />
     <Compile Include="Assets\Scripts\Map\Orbit.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\Map\Gravity.cs" />
