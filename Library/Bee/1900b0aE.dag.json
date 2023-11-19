@@ -139,8 +139,8 @@
       "DisplayName": "Writing UnityEngine.TestRunner.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
       "PayloadOffset": 107,
-      "PayloadLength": 37,
-      "PayloadDebugContentSnippet": "C:\\Users\\kshaf\\The World To Me",
+      "PayloadLength": 53,
+      "PayloadDebugContentSnippet": "C:\\Users\\glase\\OneDrive\\Docume",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.UnityAdditionalFile.txt"
@@ -151,7 +151,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.rsp",
       "DisplayName": "Writing UnityEngine.TestRunner.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 237,
+      "PayloadOffset": 253,
       "PayloadLength": 44844,
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
@@ -164,9 +164,9 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.rsp2",
       "DisplayName": "Writing UnityEngine.TestRunner.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 45175,
-      "PayloadLength": 50,
-      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\kshaf\\The W",
+      "PayloadOffset": 45191,
+      "PayloadLength": 66,
+      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\glase\\OneDr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.rsp2"
@@ -1917,7 +1917,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.dll.mvfrm.rsp",
       "DisplayName": "Writing UnityEngine.TestRunner.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 45328,
+      "PayloadOffset": 45360,
       "PayloadLength": 7355,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
@@ -2118,9 +2118,9 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.UnityAdditionalFile.txt",
       "DisplayName": "Writing UnityEditor.TestRunner.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 52796,
-      "PayloadLength": 37,
-      "PayloadDebugContentSnippet": "C:\\Users\\kshaf\\The World To Me",
+      "PayloadOffset": 52828,
+      "PayloadLength": 53,
+      "PayloadDebugContentSnippet": "C:\\Users\\glase\\OneDrive\\Docume",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.UnityAdditionalFile.txt"
@@ -2131,7 +2131,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.rsp",
       "DisplayName": "Writing UnityEditor.TestRunner.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 52926,
+      "PayloadOffset": 52974,
       "PayloadLength": 50957,
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
@@ -2144,9 +2144,9 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.rsp2",
       "DisplayName": "Writing UnityEditor.TestRunner.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 103977,
-      "PayloadLength": 50,
-      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\kshaf\\The W",
+      "PayloadOffset": 104025,
+      "PayloadLength": 66,
+      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\glase\\OneDr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.rsp2"
@@ -2604,7 +2604,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.dll.mvfrm.rsp",
       "DisplayName": "Writing UnityEditor.TestRunner.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 104130,
+      "PayloadOffset": 104194,
       "PayloadLength": 7521,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
@@ -2809,9 +2809,9 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.VisualStudio.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 111767,
-      "PayloadLength": 37,
-      "PayloadDebugContentSnippet": "C:\\Users\\kshaf\\The World To Me",
+      "PayloadOffset": 111831,
+      "PayloadLength": 53,
+      "PayloadDebugContentSnippet": "C:\\Users\\glase\\OneDrive\\Docume",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.UnityAdditionalFile.txt"
@@ -2822,8 +2822,8 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.rsp",
       "DisplayName": "Writing Unity.VisualStudio.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 111900,
-      "PayloadLength": 36424,
+      "PayloadOffset": 111980,
+      "PayloadLength": 36517,
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
       "Outputs": [
@@ -2835,9 +2835,9 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.rsp2",
       "DisplayName": "Writing Unity.VisualStudio.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 148421,
-      "PayloadLength": 50,
-      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\kshaf\\The W",
+      "PayloadOffset": 148594,
+      "PayloadLength": 66,
+      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\glase\\OneDr",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.rsp2"
@@ -3061,6 +3061,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll",
         "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll",
+        "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.ref.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll",
         "Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/AssemblyInfo.cs",
@@ -3165,7 +3166,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.VisualStudio.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 148577,
+      "PayloadOffset": 148766,
       "PayloadLength": 7605,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
@@ -3372,9 +3373,9 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.UnityAdditionalFile.txt",
       "DisplayName": "Writing Assembly-CSharp.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 156288,
-      "PayloadLength": 37,
-      "PayloadDebugContentSnippet": "C:\\Users\\kshaf\\The World To Me",
+      "PayloadOffset": 156477,
+      "PayloadLength": 53,
+      "PayloadDebugContentSnippet": "C:\\Users\\glase\\OneDrive\\Docume",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.UnityAdditionalFile.txt"
@@ -3385,8 +3386,8 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp",
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 156411,
-      "PayloadLength": 31241,
+      "PayloadOffset": 156616,
+      "PayloadLength": 31644,
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
       "Outputs": [
@@ -3398,7 +3399,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 187739,
+      "PayloadOffset": 188347,
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -3617,21 +3618,27 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
+        "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll",
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.ref.dll",
-        "Assets/Scripts/affinity.cs",
-        "Assets/Scripts/ArrayLayout.cs",
-        "Assets/Scripts/ChangeScene.cs",
-        "Assets/Scripts/DialogueManager.cs",
-        "Assets/Scripts/DialogueUI.cs",
-        "Assets/Scripts/LeaveConversationUI.cs",
-        "Assets/Scripts/orbitalMovement.cs",
-        "Assets/Scripts/Questions.cs",
-        "Assets/Scripts/rotate.cs",
-        "Assets/Scripts/Sentences.cs",
-        "Assets/Scripts/spawnMoon.cs",
-        "Assets/Scripts/spawnPlanet.cs",
-        "Assets/Scripts/Titlescreen.cs",
-        "Assets/Scripts/tracker.cs",
+        "Assets/Scripts/DataSavingLoading/IDataService.cs",
+        "Assets/Scripts/DataSavingLoading/JsonDataService.cs",
+        "Assets/Scripts/Dialogue/ArrayLayout.cs",
+        "Assets/Scripts/Dialogue/DialogueManager.cs",
+        "Assets/Scripts/Dialogue/DialogueUI.cs",
+        "Assets/Scripts/Dialogue/LeaveConversationUI.cs",
+        "Assets/Scripts/Dialogue/Questions.cs",
+        "Assets/Scripts/Dialogue/Sentences.cs",
+        "Assets/Scripts/Dialogue/Titlescreen.cs",
+        "Assets/Scripts/Map/CameraController.cs",
+        "Assets/Scripts/Map/ChangeScene.cs",
+        "Assets/Scripts/Map/ChangeSceneGrav.cs",
+        "Assets/Scripts/Map/Gravity.cs",
+        "Assets/Scripts/Map/Orbit.cs",
+        "Assets/Scripts/Map/PlayerMovement.cs",
+        "Assets/Scripts/Map/Rotate.cs",
+        "Assets/Scripts/Map/SpawnMoon.cs",
+        "Assets/Scripts/Map/SpawnPlanet.cs",
+        "Assets/Scripts/Map/Tracker.cs",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll",
         "Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp"
@@ -3686,7 +3693,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 187835,
+      "PayloadOffset": 188443,
       "PayloadLength": 7268,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
@@ -4004,13 +4011,14 @@
     {
       "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json",
       "DisplayName": "BuildPlayerDataGenerator TypeDb-All",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:\\Users\\kshaf\\The World To Me [DEMO]\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"C:\\Users\\kshaf\\The World To Me [DEMO]\\Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll\" -a=\"C:\\Users\\kshaf\\The World To Me [DEMO]\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\\nunit.framework.dll\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"C:\\Users\\kshaf\\The World To Me [DEMO]\\Library\\ScriptAssemblies\" -s=\"C:\\Users\\kshaf\\The World To Me [DEMO]\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
+      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\\nunit.framework.dll\" -a=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1\\Runtime\\Newtonsoft.Json.dll\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.11f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\ScriptAssemblies\" -s=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.ext.nunit@1.0.6\\net35\\unity-custom\" -s=\"C:\\Users\\glase\\OneDrive\\Documents\\GitHub\\garlic-nodes\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@3.2.1\\Runtime\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
       "Inputs": [
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/netcorerun/netcorerun.exe",
         "C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
         "Library/ScriptAssemblies/Assembly-CSharp.dll",
         "Library/ScriptAssemblies/UnityEngine.TestRunner.dll",
-        "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+        "Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll",
+        "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll"
       ],
       "Outputs": [
         "Library/BuildPlayerData/Editor/TypeDb-All.json"
@@ -4160,6 +4168,9 @@
       "File": "Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/csc.rsp"
     },
     {
+      "File": "Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll"
+    },
+    {
       "File": "Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/csc.rsp"
     },
     {
@@ -4198,6 +4209,6 @@
   "SharedResources": [],
   "Scanners": [],
   "Identifier": "Library/Bee/1900b0aE.dag.json",
-  "PayloadsFile": "C:/Users/kshaf/The World To Me [DEMO]/Library/Bee/1900b0aE.dag.payloads",
+  "PayloadsFile": "C:/Users/glase/OneDrive/Documents/GitHub/garlic-nodes/Library/Bee/1900b0aE.dag.payloads",
   "RelativePathToRoot": "../.."
 }
