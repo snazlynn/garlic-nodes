@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 507865386}
   - component: {fileID: 507865385}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: pMusic
   m_TagString: PlanetTheme
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

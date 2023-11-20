@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class FadeOut : MonoBehaviour
 {
-    public int fadeOutTime = 10;
-    public GameObject[] allTheme;
-    void Start() {
-        allTheme = GameObject.FindGameObjectsWithTag("PlanetTheme");
-    }
+    public int fadeOutTime = 1;
+    public GameObject theme;
+    public AudioSource p;
+
 
     void FixedUpdate() {
-        
-        for (int i = 0; i < allTheme.Length; i++) {
-            AudioSource theme = allTheme[i].GetComponent<AudioSource>();
+        theme = GameObject.Find("pMusic");
+        if (theme) {
+            p = theme.GetComponent<AudioSource>();
 
-            if (theme.volume > 0) {
-                theme.volume = theme.volume - (Time.deltaTime / fadeOutTime + 1);
+            if (p.volume > 0) {
+                p.volume = p.volume - (Time.deltaTime / fadeOutTime);
+            }
+            else {
+                Destroy(GameObject.Find("pMusic"));
+                Destroy(this);
             }
         }
-
-        Destroy(this);
+        else {
+            Destroy(this);
+        }
     }
 }

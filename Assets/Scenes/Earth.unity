@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 2104305689}
   - component: {fileID: 2104305687}
   m_Layer: 0
-  m_Name: EarthTheme
+  m_Name: pMusic
   m_TagString: PlanetTheme
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

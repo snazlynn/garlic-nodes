@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 1007616297}
   - component: {fileID: 1007616296}
   m_Layer: 0
-  m_Name: JupiterTheme
+  m_Name: pMusic
   m_TagString: PlanetTheme
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

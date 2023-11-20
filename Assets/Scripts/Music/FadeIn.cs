@@ -4,7 +4,7 @@ using UnityEngine.Audio;
 
 public class FadeIn : MonoBehaviour
 {
-    public int fadeInTime = 5;
+    public int fadeInTime = 3;
     public GameObject bgTemp;
     public AudioSource currTheme;
     public AudioSource bg;
@@ -21,6 +21,7 @@ public class FadeIn : MonoBehaviour
         currTheme.time = bg.time;
         if (GetComponent<AudioSource>().volume < 1) {
             GetComponent<AudioSource>().volume = GetComponent<AudioSource>().volume + (Time.deltaTime / (fadeInTime + 1));
+            DontDestroyOnLoad(currTheme);
         }
         else {
             Destroy(this);
