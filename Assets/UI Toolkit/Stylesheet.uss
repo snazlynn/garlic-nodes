@@ -4,7 +4,7 @@
     width: 160px;
     height: 65px;
     font-size: 24px;
-    -unity-font-style: bold;
+    -unity-font-style: normal;
     border-top-width: 5px;
     border-right-width: 5px;
     border-bottom-width: 5px;
@@ -14,15 +14,19 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     align-self: center;
-    border-left-color: rgb(0, 0, 0);
-    border-right-color: rgb(0, 0, 0);
-    border-top-color: rgb(0, 0, 0);
-    border-bottom-color: rgb(0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-image: url('project://database/Assets/sourceImages/UI/choicebox.png?fileID=21300000&guid=0cee24b814f0e494c94eb398ccc44569&type=3#choicebox');
+    background-color: rgba(56, 56, 56, 0);
+    -unity-font-definition: url('project://database/Assets/minecraft-font/MinecraftRegular-Bmg3%20SDF.asset?fileID=11400000&guid=c7d1599fb4e5f4a06858fb2832088869&type=2#MinecraftRegular-Bmg3 SDF');
+    color: rgb(255, 212, 69);
 }
 
 .dialogueBox {
     align-self: center;
-    background-color: rgba(58, 27, 91, 0.78);
+    background-color: rgba(58, 27, 91, 0);
     width: 80%;
     height: 20%;
     position: absolute;
@@ -40,13 +44,16 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     color: rgb(169, 230, 248);
+    background-image: url('project://database/Assets/sourceImages/UI/dialoguebox.png?fileID=21300000&guid=05609dc4744644814aa4d7ca392564c3&type=3#dialoguebox');
 }
 
 .dialogueText {
     color: rgb(169, 230, 248);
-    font-size: 24px;
+    font-size: 230%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 40px;
     margin-left: 40px;
+    -unity-font-definition: url('project://database/Assets/roboto-remix-font/Minecraftchmc-dBlX%20SDF.asset?fileID=11400000&guid=c407c08d1c7274fab93e15fcf2e44aae&type=2#Minecraftchmc-dBlX SDF');
+    -unity-font-style: normal;
 }

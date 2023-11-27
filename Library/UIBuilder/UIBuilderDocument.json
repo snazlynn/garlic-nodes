@@ -29,32 +29,32 @@
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Toolkit/TitleScreen.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Toolkit/DialogueBox.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "1dcd4eb5186af3b40a6ed532ea3cea41",
+                    "guid": "e7594feb49e4043418bf51515ab1c2e9",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
                     "instanceID": 0
                 },
                 "m_Settings": {
-                    "UxmlGuid": "1dcd4eb5186af3b40a6ed532ea3cea41",
-                    "UxmlPath": "Assets/UI Toolkit/TitleScreen.uxml",
+                    "UxmlGuid": "e7594feb49e4043418bf51515ab1c2e9",
+                    "UxmlPath": "Assets/UI Toolkit/DialogueBox.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
-                    "CanvasWidth": 3048,
-                    "CanvasHeight": 1836,
-                    "MatchGameView": false,
-                    "ZoomScale": 0.30000001192092898,
+                    "CanvasWidth": 1920,
+                    "CanvasHeight": 1080,
+                    "MatchGameView": true,
+                    "ZoomScale": 0.44999998807907107,
                     "PanOffset": {
-                        "x": 83.02032470703125,
-                        "y": 104.9864501953125
+                        "x": -85.34513854980469,
+                        "y": 9.182373046875
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
                     "CameraModeCanvasBackgroundOpacity": 1.0,
-                    "EnableCanvasBackground": false,
+                    "EnableCanvasBackground": true,
                     "CanvasBackgroundMode": 0,
                     "CanvasBackgroundColor": {
                         "r": 0.0,

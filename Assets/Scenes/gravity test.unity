@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Uranus
+  inkJSON: {fileID: 0}
 --- !u!58 &73782245
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -390,7 +391,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 440a912f0f26f034e87a7d3203212a3c, type: 3}
-  m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -428,6 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Mercury
+  inkJSON: {fileID: 4900000, guid: f0bf8fb82106442589c52d936594ad28, type: 3}
 --- !u!58 &252214979
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -605,6 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Mars
+  inkJSON: {fileID: 0}
 --- !u!58 &371606896
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -985,6 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Saturn
+  inkJSON: {fileID: 0}
 --- !u!58 &818788086
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1545,6 +1549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Jupiter
+  inkJSON: {fileID: 0}
 --- !u!58 &1632644340
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1722,6 +1727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Pluto
+  inkJSON: {fileID: 0}
 --- !u!58 &1725184369
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1899,6 +1905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Earth
+  inkJSON: {fileID: 0}
 --- !u!58 &1804473511
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2076,6 +2083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Venus
+  inkJSON: {fileID: 0}
 --- !u!58 &1820766529
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2253,6 +2261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Neptune
+  inkJSON: {fileID: 0}
 --- !u!58 &2016272358
 CircleCollider2D:
   m_ObjectHideFlags: 0

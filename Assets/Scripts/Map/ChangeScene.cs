@@ -8,7 +8,10 @@ public class ChangeScene : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-            SceneManager.LoadScene(scene);
+        Debug.Log("ON COLLISION");
+        SceneManager.LoadScene(scene);
+        //DialogueManager.GetInstance().EnterDialogueMode();
+            
         
         Tracker.lastScene = gameObject.name;
 
