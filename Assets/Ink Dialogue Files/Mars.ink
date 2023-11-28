@@ -15,6 +15,16 @@ VAR affinity = 0
     -> MarsSecond
 }
 
+{ interactions == 2:
+    ~ interactions++
+    ~ dayInteractions++
+    -> MarsThird
+}
+
+{ interactions == 3:
+    -> MarsFourth
+}
+
 === MarsFirst ===
 
 Oh... hi Mars... #speaker:Moon
@@ -135,5 +145,114 @@ Great. They're probably hiding from you, Moon. #speaker:Deimos
 I'll talk to them and try to get them calm enough to talk to Moon. You'll probably have to leave us alone for a bit, but I'll let you know when you can come back, OK? #speaker:Mars
 
 Yeah, okay. #speaker:Moon
+
+-> END
+
+=== MarsThird ===
+
+Hi again... is this a good time? #speaker:Moon
+
+Yeah I think so... Phobos? #speaker:Mars
+
+Phobos appears from behind Mars and sheepishly approaches you. #speaker: 
+    * [I didn't mean to scare you.] Hey... I didn't mean to scare you. I'm sorry. #speaker:Moon
+        ~ affinity++
+        I-it's fine. I get scared by a lot of things. #speaker:Phobos
+        Just so you know, I'm not really scared of you... like, you as a celestial body. #speaker:Phobos
+    * [I'm not going to replace you.] You're going to stay here. I won't... replace you. #speaker:Moon
+        I... wasn't really scared that you would kick me out completely. #speaker:Phobos
+    * [(wait for Phobos to say something)] ... #speaker:Moon
+        Just so you know, I'm not really scared of you... like, you as a celestial body. #speaker:Phobos
+
+- It's more like I was scared that... I would be forgotten. #speaker:Phobos
+    * [Mars would never forget you.] Phobos... Mars would never forget you. #speaker:Moon
+        ~ affinity++
+        Maybe not on purpose... but Deimos is the first, and you would be the newest. And where would that put me? #speaker:Phobos
+        Phobos, I talked with Jupiter earlier. They have almost a hundred moons orbiting them, and yet they make sure none of them are ever left out. #speaker:Mars
+        If they can do that, we can too. And I would never forget you, with Moon or without. #speaker:Mars
+        -> cry
+    * [Deimos would never forget you.] Deimos would never forget you. They said as much last time I was here. #speaker:Moon
+        -> deimos
+    * [I would never forget you.] Phobos... I know what it's like to be forgotten like that. #speaker:Moon
+        ~ affinity += 2
+        R-really? #speaker:Phobos
+        Earth would always ignore me for whatever was going on with the humans on the surface. I was their only moon, too. #speaker:Moon
+        And... it was miserable. It was a big part of why I left them. #speaker:Moon
+        I don't want that to happen to anyone. So I'll never forget you, and Mars won't either. #speaker:Moon
+        -> cry
+
+= cry
+
+Th-thank you. I really needed to hear that. #speaker:Phobos
+
+Now if you'll excuse me, I'm going to go cry. #speaker:Phobos
+
+Phobos drifts away, again hiding behind Mars. #speaker: 
+
+Oh, don't worry about Phobos. They just get exhausted emotionally after being scared for too long. #speaker:Deimos
+
+-> main
+
+= deimos
+
+Hey! I did not! #speaker:Deimos
+
+... not that you're wrong about that. But I didn't tell you! #speaker:Deimos
+
+You mean it? You wouldn't forget me? #speaker:Phobos
+
+Are you kidding? You're my best friend in the whole universe. Moon can take Mars away frm us, but they can never take me away from you. #speaker:Deimos
+
+Th-thank you. I really needed to hear that. #speaker:Phobos
+
+... WAIT IS MOON TAKING MARS AWAY FROM US??? #speaker:Phobos
+
+Wait, that's not what I-- aaaaand there they go. #speaker:Deimos
+
+Phobos had already darted back behind Mars in a panic. #speaker: 
+
+Yeah, this one's on me. Don't worry, I'll go talk to them. #speaker:Deimos
+
+-> main
+
+= main
+
+So now that you two have gotten a chance to know Moon better, do they have your blessing to orbit with us? #speaker:Mars
+
+Ugh, this again. I guess I'm not completely opposed to it anymore, but I don't want to say yes without talking it over with Phobos first. Gimme some time, alright? #speaker:Deimos
+
+Uh, yeah. Sure thing. #speaker:Moon
+
+You watch as Deimos retreats behind Mars to talk to Phobos. #speaker: 
+
+Thanks for being so kind to them. I know they can be a bit hostile to strangers, but they're really not bad when you get to know them. #speaker:Mars
+
+I'll let you know what they decide. I'm hoping they can finally accept you. #speaker:Mars
+
+Yeah... I hope so too. #speaker:Moon
+
+-> END
+
+=== MarsFourth ===
+
+Hi... you wanted to talk to me again? #speaker:Moon
+
+Yeah, the twins had something they wanted to say... #speaker:Mars
+
+Hey Moon, I wanted to apologize for being a jerk to you. It was probably uncalled for. #speaker:Deimos
+
+And I wanted to say sorry for getting so worked up. Though, it will definitely happen again. #speaker:Phobos
+
+We also wanted to say that if you still wanted to orbit Mars, that would be cool with us. #speaker:Deimos
+
+Though, if you've found another planet to orbit by now, I totally understand. #speaker:Mars
+
+Mars... I would love to orbit you. You've meant the world to me for as long as I can remember. #speaker:Moon
+
+And I would love to have you by my side. And I'm sure these two would agree. #speaker:Mars
+
+Well, I wouldn't go THAT far... #speaker:Deimos
+
+And so, Moon joined Phobos and Deimos in their orbit around Mars. And they were loved, and none were forgotten. #speaker: 
 
 -> END

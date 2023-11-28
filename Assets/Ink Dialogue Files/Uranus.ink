@@ -22,6 +22,16 @@ VAR triviaNight = false
     -> UranusSecond
 }
 
+{ interactions == 2:
+    ~ interactions++
+    ~ dayInteractions++
+    -> UranusThird
+}
+
+{ interactions == 3:
+    -> UranusFourth
+}
+
 === UranusFirst ===
 
 Hello... #speaker:Moon
@@ -35,16 +45,7 @@ You are in luck, because your search ends here. You are speaking to the one and 
         -> dontsayit
     * [Yeah, I know you.] Oh yeah, I know you. #speaker:Moon
         Of course you do! I am the pioneer of the tilted look. I am the glimpse of the blue sky that stands out confidently against the dark void of vacuum. #speaker:Uranus
-        I'm not like the other planets, not even the other ice giants-- folks would trek for countless astronomical units just to meet me! That is the reason you have come here, is it not? #speaker:Uranus
-            ** [Yeah, I wanted to get to know you better.] Um... yeah, I wanted to... chat with you. #speaker:Moon
-                -> chat
-            ** [That's not exactly it.] Um... yeah, I wanted to... chat with you. #speaker:Moon
-                -> chat
-            ** [Are you usually this vain] You, uh... so you've got a lot of good stuff going on, huh. #speaker:Moon
-                Indeed. I strive to be the best planet that I can become. Thus, I must take inventory of my strengths so that I may nurture them. #speaker:Uranus
-                However, I would scorn to allow vanity to befall me. It is a deadly sin that plagues even the most unsuspecting. #speaker:Uranus Therefore, I must not risk even to humor it.
-                So enough about me! What might you be interested in conversing about, hmm? Tell me about yourself! #speaker:Uranus
-                -> main
+       -> knowyou
         
 = dontsayit
 
@@ -62,11 +63,25 @@ DON'T! YOU! SAY IT! Imbecile, I'll have you know I carry the namesake of a deity
         ~ loseGame = true
         -> END
 
+= knowyou
+
+I'm not like the other planets, not even the other ice giants-- folks would trek for countless astronomical units just to meet me! That is the reason you have come here, is it not? #speaker:Uranus
+    * [Yeah, I wanted to get to know you better.] Um... yeah, I wanted to... chat with you. #speaker:Moon
+        -> chat
+    * [That's not exactly it.] Um... yeah, I wanted to... chat with you. #speaker:Moon
+        -> chat
+    * [Are you usually this vain] You, uh... so you've got a lot of good stuff going on, huh. #speaker:Moon
+        Indeed. I strive to be the best planet that I can become. Thus, I must take inventory of my strengths so that I may nurture them. #speaker:Uranus
+        However, I would scorn to allow vanity to befall me. It is a deadly sin that plagues even the most unsuspecting. #speaker:Uranus 
+        Therefore, I must not risk even to humor it. #speaker:Uranus 
+        So enough about me! What might you be interested in conversing about, hmm? Tell me about yourself! #speaker:Uranus
+        -> main
+
 = chat
 
 Oh, splendid! Conversing with others does bring me such joy. #speaker:Uranus
 
-Might you be interseted in the fluid dynamics of methane and hydrogen under pressure? Or, if that is a bit much, have you any interest in theistic philosophy? #speaker:Uranus
+Might you be interested in the fluid dynamics of methane and hydrogen under pressure? Or, if that is a bit much, have you any interest in theistic philosophy? #speaker:Uranus
     * [Fluid dynamics, please.] Uh, sure, the first thing. #speaker:Moon
         ~ affinity++
         -> yapping
@@ -82,7 +97,7 @@ Might you be interseted in the fluid dynamics of methane and hydrogen under pres
 
 Of course! Now with the simple foundations... #speaker:Uranus
 
-Uranus blatheres on about some incomprehensible topical jarson. #speaker: 
+Uranus blathers on about some incomprehensible topical jarson. #speaker: 
 
 But, one must never neglect the edge case, despite its perceived insignificance... #speaker:Uranus
 
@@ -359,5 +374,255 @@ Splendid! I will be anticipating your next visit. #speaker:Uranus
 }
 
 Safe travels, and ciao! #speaker:Uranus
+
+-> END
+
+=== UranusThird ===
+
+Earth's moon, welcome back! I was greatly anticipating our next encounter. In fact, we all were. #speaker:Uranus
+
+Really? Thanks. I was looking forward to it, too. #speaker:Moon
+
+Of course! Your company is a great pleasure. #speaker:Uranus
+
+Now, have we any ideas for today's chatter... #speaker:Uranus
+    * [How about methane?] I dunno. You wanna try and teach me about methane again? #speaker:Moon
+        -> methane
+    * [I was thinking, you're honestly really kind.] I was thinking, you are honestly just... so kind. #speaker:Moon
+        To me... to your moons... to everyone. #speaker:Moon
+        You believe in everyone. You are caring to everyone. #speaker:Moon
+        By the stars, Earth's moon, that has just... touched me at the core. Thank you, truly. #speaker:Uranus
+        It is my belief that one shows their greatest respect when they genuinely care. #speaker:Uranus
+        And, I really do not mean to pry, nor offend, but... #speaker:Uranus
+        By your conduct... Earth's moon, is that sign of respect something you have been lacking? #speaker:Uranus
+        -> illusion_of_choice
+    * [Can I talk to you about my previous relationship?] Actually, I was wondering... #speaker:Moon
+        Could I... talk about my experience with Earth? #speaker:Moon
+        {
+            - toldUranusTroubles:
+                I wasn't really ready last time, but... #speaker:Moon
+        }
+        I think I'm a bit more comfortable opening up now. #speaker:Moon
+        Please do. I will hear you out through your finale. #speaker:Uranus
+        Alright. Well then, to be honest... #speaker:Moon
+        -> main
+
+= methane
+
+Bah! You jest! It is an inviting suggestion, but I would keep you here until next year, truly. #speaker:Uranus
+
+Just ask any of my moons about it. I tend to talk their metaphorical ears off. #speaker:Uranus
+    * [Well, maybe I wanna stay with you longer than that.] Well, maybe I'm alright with staying here for that long... #speaker:Moon
+        ~ affinity++
+        -> staylonger
+    * [Oh, I'm sure they don't mind.] Heh, I'm sure they don't mind! #speaker:Moon
+        I certainly don't. #speaker:Moon
+        Well, thank you. This is a good thing, because I enjoy chatting to an extensive degree. #speaker:Uranus
+        I've enjoyed our chats too. You may have come off a bit... eccentric at first, but... we all are, in our own way. #speaker:Moon
+        And you've been so kind. To me... and your moons, too. #speaker:Moon
+        I can tell you really care about them. #speaker:Moon
+        One shows their greatest respect when they genuinely care. #speaker:Uranus
+        Is that sight something you have been lacking? #speaker:Uranus
+        -> illusion_of_choice
+    
+= staylonger
+
+Or maybe longer. #speaker:Moon
+
+Was that some sort of suggestion, Earth's moon?! #speaker:Uranus
+
+{
+    - toldUranusBreakup:
+    
+        Heh... maybe. Or just wistful thinking. You tell me. #speaker:Moon
+        
+        Ever since we split... I don't know if I'll ever find my place again. #speaker:Moon
+        
+        ... my friend, do you perhaps wish to talk through your experience? #speaker:Uranus
+        
+        -> illusion_of_choice
+        
+    - else:
+        But hold, what might Earth think of this conduct? #speaker:Uranus
+        
+        Well, about that... #speaker:Moon
+            * [We're no longer together.] We... split up a while ago. #speaker:Moon
+                Oh dear. Would you like to talk about it? #speaker:Uranus
+                -> illusion_of_choice
+            * [I have exited this Earth's exosphere.] We... split up a while ago. #speaker:Moon
+                Oh dear. Would you like to talk about it? #speaker:Uranus
+                -> illusion_of_choice
+}
+
+= illusion_of_choice
+
+* [Yes.] ... yeah. #speaker:Moon
+* [Definitely.] ... yeah. #speaker:Moon
+* [Absolutely.] ... yeah. #speaker:Moon
+
+- -> main
+
+= main
+
+Earth and I really weren't in a great place. #speaker:Moon
+
+Sure, they were agreeable at first. Like, who would orbit an obvious prick? #speaker:Moon
+
+But after a while, they just completely ignored me. They only cared about their little surface projects. #speaker:Moon
+
+Their Cambrian oceans... those dinosaurs... now humans. There's always something more important going on. #speaker:Moon
+
+And to be honest, any further interaction was more like a performance review. #speaker:Moon
+
+"Keep those tides going! Hey, could you shed some light on my dark side?" #speaker:Moon
+
+"What do you mean, you missed the meteorite?! Those were my favorite reptiles!" #speaker:Moon
+
+I was a tool with no say, really. And I got fed up after a while. #speaker:Moon
+
+So... we ended it. #speaker:Moon
+
+My word. I... had no idea the extent to which your sitaution caused you to suffer. I am glad you feel comfortable enough to confide in me. #speaker:Uranus
+    * [Yeah, it was pretty bad.] Yeah, it was pretty bad... #speaker:Moon
+        -> main2
+    * [Yeah, and not to mention those humans.] Yeah. And after those humans just up and landed on me? That was enough. #speaker:Moon
+        ~ affinity++
+        -> humans
+    * [Thank you for hearing me out.] Yeah. I know that was a lot, but... thank you for hearing me out. #speaker:Moon
+        -> hearing
+
+= humans
+
+NO WAY! They just... let them land on your surface without permission like that?! #speaker:Ariel
+
+Oh, uh, sorry for interrupting. Just couldn't let that slide. #speaker:Ariel
+
+And for eavesdropping. #speaker:Ariel
+
+I'll uh, see myself out. :) #speaker:Ariel
+
+And we wonder why they know our daily routines to the letter... #speaker:Uranus
+
+Nevertheless, I agree. I can only imagine how violating that must feel. #speaker:Uranus
+
+And on top of all the other transgressions... #speaker:Uranus
+
+Yeah, it was a lot. #speaker:Moon
+
+-> main2
+
+= hearing
+
+It's nice to get to tell someone. #speaker:Moon
+
+Even nicer that you just... kind of always know what to say. To help me feel a little better. #speaker:Moon
+
+Thank you. I may never know what an individual is feeling at all times. Thus I believe it right to treat all others with compassion. #speaker:Uranus
+
+If I speak too quickly or erroneously make an assumption, that is okay. That is what a sincere apology and accountability is for. #speaker:Uranus
+
+I am pleased to hear that my policy affirms itself with you. And it is my sincere hope that your state improves after all you have been through. #speaker:Uranus
+
+Yeah, it was a lot. #speaker:Moon
+
+-> main2
+
+= main2
+
+I'm glad I got out, but... I don't really know what to do now. #speaker:Moon
+
+Despite the uncertainty it may be causing you, it was the correct choice. And in times of uncertainty, it is imperative to think things over carefully. #speaker:Uranus
+
+Consider your most eminent values. Turn to the counsel of individuals you trust for guidance. #speaker:Uranus
+
+And, you are already progressing in one of those steps. Bravo! Although, given my speech patterns, there may not be much value to my counsel. #speaker:Uranus
+
+Don't sell yourself short. You have been a huge help through all of this. #speaker:Moon
+
+I am so glad I can accomplish that for you, Moon. So very glad. #speaker:Uranus
+
+Me too. Thank you so much. Not just for listening. For all your help. For everyone you've done for me. #speaker:Moon
+
+Of course. #speaker:Uranus
+
+When you depart, I request that you take that aforementioned reflection time. #speaker:Uranus
+
+Allow yourself to exist in the uncertainty for a while. Let yourself flow past it with tranquility. #speaker:Uranus
+
+I also request... #speaker:Uranus
+
+... that you return again sometime. #speaker:Uranus
+
+I think I will. Thank you, Uranus. #speaker:Moon
+
+And thank you, Moon. For looking past my quirks. For knowing me for real. #speaker:Uranus
+
+One more time, then... ciao for now! #speaker:Uranus
+
+Ciao! :) #speaker:Moon
+
+-> END
+
+=== UranusFourth ===
+
+Hey, Uranus. #speaker:Moon
+
+Oh, Moon! I am just related at your arrival! Come, tell me how you fare and what is on your mind. #speaker:Uranus
+
+Well... I've been going around, thinking of some... final goodbyes. #speaker:Moon
+
+My lone orbit is getting unstable, so my time for loitering around here is running out. #speaker:Moon
+
+... I see. This... brings me sorrow. Will you ever return? #speaker:Uranus
+
+Well, about that. You know... despite that looming anxiety, I've been trying to think things over. Like you said. #speaker:Moon
+
+And, well... Uranus... #speaker:Moon
+
+Would you allow me to orbit you? #speaker:Moon
+
+OOO! I can vouch! A sweetheart and a total hoot, what's not to love? #speaker:Ariel
+
+Ariel seems to have shown up out of nowhere. #speaker: 
+
+As can I. Moon is both considerate, and a worthy opponent. #speaker:Miranda
+
+Absolutely, I think they'll be right at home here. #speaker:Oberon
+
+The rest of the moons seem to have followed suit. #speaker: 
+
+Oh, Moon, I thought you'd never ask!!! Yes, of course you may! Uncountably infinite times, yes! #speaker:Uranus
+
+Get in here, bud! #speaker:Oberon
+
+The moons crowd around like some sort of hydrostatically equilibrated group hug. #speaker: 
+
+There is one loose end... it would be just silly to continue referring to you simply as Moon. Might there be a name you may have in mind? #speaker:Uranus
+
+I can assist with ideas if you'd like, but be warned-- most of them originate from my favorite fables. #speaker:Uranus
+
+Heh, that's alright, thank you. #speaker:Moon
+
+I think I'll go with... Luna. #speaker:Moon
+
+Then Luna, I swear to you, #speaker:Uranus
+
+by my core, by my atmosphere, by everything in between, #speaker:Uranus
+
+by my great name as Uranus, #speaker:Uranus
+
+I will be your planet. #speaker:Uranus
+
+I will treat you with the respect and care you deserve as an individual. #speaker:Uranus
+
+I will treat you better than the scoundrel Earth who cast you away. #speaker:Uranus
+
+And you will have a place here, for as long as the great universe expands. #speaker:Uranus
+
+I swear it. #speaker:Uranus
+
+Uranus... thank you. #speaker:Luna
+
+You really are my world. #speaker:Luna
 
 -> END

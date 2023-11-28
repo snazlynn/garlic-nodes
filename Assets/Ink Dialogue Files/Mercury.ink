@@ -2,6 +2,7 @@ INCLUDE globals.ink
 
 VAR interactions = 0
 VAR affinity = 0
+
 { interactions == 0:
     ~ interactions++
     ~ dayInteractions++
@@ -12,6 +13,16 @@ VAR affinity = 0
     ~ interactions++
     ~ dayInteractions++
     -> MercurySecond
+}
+
+{ interactions == 2:
+    ~ interactions++
+    ~ dayInteractions++
+    -> MercuryThird
+}
+
+{ interactions == 3:
+    -> MercuryFourth
 }
     
 
@@ -189,6 +200,7 @@ They're literally the center of our solar system! A massive star, right here, ne
         See? You don't even know. And besides, what other reasons would I need to like them? They're just perfect. #speaker:Mercury
     * [Aren't there usually other reasons too?] I feel like usually there are other reasons you'd like someone. #speaker:Moon
         ~ affinity++
+
 - * Does the sun even like you back? #speaker:Moon
     ~ affinity++
     ... of course they do! #speaker:Mercury
@@ -220,5 +232,197 @@ It's okay, Mercury, there are plenty of stars in the universe... #speaker:Moon
 Ugh, I've enough of you! Did you come here just to make fun of me or something?? #speaker:Mercury
 
 Leave me alone! Better yet, never come back! #speaker:Mercury
+
+-> END
+
+=== MercuryThird ===
+
+... you. #speaker:Mercury
+
+Yeah. #speaker:Moon
+
+What are you here for? Came over to laugh at me again? Didn't get enough of it last time? #speaker:Mercury
+    * Sure, I'd be up for laughing. #speaker:Moon
+        You're such a black hole!! #speaker:Mercury
+        ... are you really saying that to me? #speaker:Moon
+        ... yeah, I guess I can't really talk... #speaker:Mercury
+    * Why would I laugh at you? #speaker:Moon
+        That pretend-innocence of yours really doesn't suit you. #speaker:Mercury
+    * Oh come on, don't be so sore about it. #speaker:Moon
+        You don't have the right to say that to me, Moon. #speaker:Mercury
+
+- ... #speaker:Mercury
+
+Okay, fine, I'll just say it. #speaker:Mercury
+
+I thought about what you said last time. About the whole... sun... thing. #speaker:Mercury
+    * So, you've finally come to recognize my omniscience? #speaker:Moon
+        Shut up for once, will you?? #speaker:Mercury
+    * Okay... #speaker:Moon
+        And... #speaker:Mercury
+    * ... #speaker:Moon
+        ~ affinity++
+        And... #speaker:Mercury
+
+- ... what I wanted to say was, I-I guess I was kind of wrong in... about why I liked them. #speaker:Mercury
+
+You were right. I guess. But don't let it go to your head. #speaker:Mercury
+    * I don't think you were wrong, per say. #speaker:Moon
+        ~ affinity++
+        ... then why did you say all of that earlier??? #speaker:Mercury
+        Well, I mean, I don't think you were wrong for just liking the sun. #speaker:Moon
+        But it seemed like you liked them because you had to. And there was no other reason. #speaker:Moon
+    * It's okay, Mercury. #speaker:Moon
+        ... #speaker:Mercury
+    * yeah man #speaker:Moon
+        ~ affinity--
+        ... #speaker:Mercury
+
+- * I know what it's like. #speaker:Moon
+    ~ affinity++
+    -> know
+* I was worried for you. #speaker:Moon
+    -> worried
+
+= know
+
+What do you mean? #speaker:Mercury
+
+... #speaker:Moon
+
+That's how I felt with Earth. #speaker:Moon
+
+If you asked me what I liked about them, I don't know if I could come up with a single thing. #speaker:Moon
+
+But I still said I did, because I was their moon. I felt like I had to. #speaker:Moon
+
+They're-- they were the center of my universe. Literally. #speaker:Moon
+
+... did you break up with Earth? #speaker:Mercury
+    * Yeah. #speaker:Moon
+        ~ affinity++
+        Oh. #speaker:Mercury
+    * ... #speaker:Moon
+
+- Sorry. I didn't mean to pry. But thank you, for saying all of that. #speaker:Mercury
+
+-> main
+
+= worried
+
+... thanks, Moon. #speaker:Mercury
+
+I don't think anyone's ever said that to me before, actually. #speaker:Mercury
+    * I'm not surprised. #speaker:Moon
+        ~ affinity--
+        Hey! No need to rub it in, dude. #speaker:Mercury
+        ... your comments aside, thanks. For saying all of this. #speaker:Mercury
+        -> main
+    * That's... kind of sad. #speaker:Moon
+        Hey! No need to rub it in, dude. #speaker:Mercury
+        ... your comments aside, thanks. For saying all of this. #speaker:Mercury
+        -> main
+    * Why not? #speaker:Moon
+        ~ affinity++
+        I don't know. I guess I was just always chasing after the sun so I never bothered with anyone else. And... no one bothered with me. #speaker:Mercury
+        Oh. #speaker:Moon
+        -> main
+= main
+
+... and I'm sorry for what I said when we first met. About you having no presence. #speaker:Mercury
+
+I didn't mean it. Well, even if I did, I shouldn't have said it to you. #speaker:Mercury
+
+You're forgiven. #speaker:Moon
+
+Thanks. #speaker:Mercury
+
+... #speaker:Mercury
+
+You know, I don't think the sun will ever notice me. #speaker:Mercury
+    * You'll still be okay. #speaker:Moon
+        ~ affinity++
+        ... yeah. #speaker:Mercury
+        I think I will be. #speaker:Mercury
+    * I'm sure someone else will. #speaker:Moon
+        Haha. Thanks, Moon. #speaker:Mercury
+    * The sun doesn't matter anyway. #speaker:Moon
+        Haha. Thanks, Moon. #speaker:Mercury
+
+- ... I'll see you around, okay? #speaker:Mercury
+
+-> END
+
+=== MercuryFourth ===
+
+Hey Moon-- wait, what's wrong with you? Why are you shaking like that? #speaker:Mercury
+
+Hey um, sorry, my orbit's just really unstable right now. #speaker:Moon
+
+... I noticed last time, actually. I wasn't gonna say anything, but it looks like it's gotten worse. #speaker:Mercury
+
+Every since I broke up with Earth, it's been becoming more and more irregular. #speaker:Moon
+
+Oh. I should've guessed. #speaker:Mercury
+
+It's fine. #speaker:Moon
+
+To be honest with you, Mercury, I don't think I have a lot of time left before it gets too unstable. #speaker:Moon
+
+So I came to see you. For the last time, I guess. #speaker:Moon
+
+... Moon. #speaker:Mercury
+
+Would you be willing to orbit me? #speaker:Mercury
+
+... what??? #speaker:Moon
+
+I-I know it's kind of sudden but... #speaker:Mercury
+
+I feel like we've gotten to know each other pretty well, right? I mean, I've never had a moon before, but it'd be a shame if you were kicked out of our solar system just because of some prick. #speaker:Mercury
+
+... so I should stay in our solar system for a different prick instead? #speaker:Moon
+
+That-- that's what I'm trying to say, I guess. Yeah. #speaker:Mercury
+    * Uh yeah okay let's do it man #speaker:Moon
+        -> clowntown
+    * Sure, I guess I'd be down to clown for you. #speaker:Moon
+        -> clowntown
+    * [I'd love to.] I'd love to, Mercury. #speaker:Moon
+        -> main
+
+= clowntown
+
+... really? You can't take this any more seriously? This is a pretty grave situation, Moon, I don't know if you've realized that. #speaker:Mercury
+
+This is my orbit we're talking about, Mercury, I think I know. #speaker:Moon
+
+Okay. Yeah. #speaker:Mercury
+
+... so you really mean it? #speaker:Mercury
+
+Yeah. #speaker:Moon
+
+-> main
+
+= main
+
+I mean, as annoying as you are, you've kind of grown on me. Like a virus. #speaker:Moon
+
+Hey! #speaker:Mercury
+
+So as long as you absolutely promise to stop chasing after the sun... #speaker:Moon
+
+Don't worry, Moon. That's not gonna be a problem anymore. #speaker:Mercury
+
+Good. #speaker:Moon
+
+... #speaker:Moon
+
+No promises on my side though lol #speaker:Moon
+
+... #speaker:Mercury
+
+HUH?? #speaker:Mercury
 
 -> END
