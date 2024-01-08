@@ -40,19 +40,18 @@ public class orbit : MonoBehaviour
     void Update(){
         if(!Tracker.orbiting.Equals("") && clockwise){
             launchVector = new Vector2((transform.position-planet.transform.position).normalized.y, (transform.position-planet.transform.position).normalized.x*-1f);
-            //Debug.DrawRay(transform.position, launchVector*100.0f, Color.red);
+            Debug.DrawRay(transform.position, launchVector*10.0f, Color.green);
             transform.RotateAround(Vector3.zero, Vector3.forward, planetSpeed * Time.deltaTime);
             transform.RotateAround(planet.transform.position, Vector3.back, moonSpeed * Time.deltaTime);
         }
         else if(!Tracker.orbiting.Equals("") && !clockwise){
             launchVector = new Vector2((transform.position-planet.transform.position).normalized.y*-1f, (transform.position-planet.transform.position).normalized.x);
-            //Debug.DrawRay(transform.position, launchVector*100.0f, Color.green);
+            Debug.DrawRay(transform.position, launchVector*10.0f, Color.green);
             transform.RotateAround(Vector3.zero, Vector3.forward, planetSpeed * Time.deltaTime);
             transform.RotateAround(planet.transform.position, Vector3.forward, moonSpeed * Time.deltaTime);
         }
         else{
             rbDirection = GetComponent<Rigidbody2D>().velocity;
-            //Debug.DrawRay(transform.position, rbDirection*100f, Color.blue);
         }
         planetDirections["Mercury"] = GameObject.Find("Mercury").transform.position-transform.position;
         planetDirections["Venus"] = GameObject.Find("Venus").transform.position-transform.position;
