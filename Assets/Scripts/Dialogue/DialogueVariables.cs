@@ -6,30 +6,24 @@ using Ink.Runtime;
 public class DialogueVariables
 {
     // maps variable name to value of variable
-    private Dictionary<string, object> variables;
+    private static Dictionary<string, object> variables;
+    public static List<string> variableKeys;
+    private static TextAsset globalJSON = Resources.Load<TextAsset>("ink_dialogue/globals");
+    private static Story globalVariablesStory = new Story(globalJSON.text);
 
-    public DialogueVariables(Story globalVariablesStory)
+    public static void setDict()
     {
         variables = new Dictionary<string, object>();
         foreach(string name in globalVariablesStory.variablesState)
         {
             object value = globalVariablesStory.variablesState[name];
             variables.Add(name, value);
-            Debug.Log("initialized global dialogue variable " + name + " = " + value);
+            //Debug.Log("initialized global dialogue variable " + name + " = " + value);
         }
-    }
-    public void StartListening(Story story)
-    {
-        VariablesToStory(story);
-        story.variablesState.variableChangedEvent += VariableChanged;
+        variableKeys = new List<string>(variables.Keys);
     }
 
-    public void StopListening(Story story)
-    {
-        story.variablesState.variableChangedEvent += VariableChanged;
-    }
-
-    private void VariableChanged(string name, object value)
+    public static void VariableChanged(string name, object value)
     {
         // updates variable in dictionary
         if(variables.ContainsKey(name))
@@ -37,15 +31,15 @@ public class DialogueVariables
             variables.Remove(name);
             variables.Add(name, value);
         }
-        //Debug.Log("variable changed " + name + " = " + value);
+        Debug.Log("variable changed " + name + " = " + value);
     }
 
     // loads all updated variables into ink story
-    private void VariablesToStory(Story story)
+    public static void VariablesToStory()
     {
         foreach(KeyValuePair<string, object> variable in variables)
         {
-            story.variablesState[variable.Key] = variable.Value;
+            globalVariablesStory.variablesState[variable.Key] = variable.Value;
             
         }
     }

@@ -665,6 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: ab13aa1f2a57b46869225ec8232db9f7, type: 3}
+  globalJSON: {fileID: 4900000, guid: 1fcbefa14982846dfb05b751fe8fd65f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

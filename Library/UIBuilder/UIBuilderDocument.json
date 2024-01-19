@@ -17,44 +17,46 @@
                     {
                         "m_StyleSheet": {
                             "fileID": 7433441132597879392,
-                            "guid": "96ec02930f8113a4ab0b37bd76110a82",
+                            "guid": "f6d7b2aa32ac44f34ae7c0c17115d367",
                             "type": 3
                         },
                         "m_BackupStyleSheet": {
                             "instanceID": 0
                         },
-                        "m_OldPath": "Assets/UI Toolkit/Stylesheet.uss"
+                        "m_OldPath": "Assets/UI Toolkit/EnterDialogueStyleSheet.uss"
                     }
                 ],
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Toolkit/DialogueBox.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Toolkit/EnterDialogue.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "e7594feb49e4043418bf51515ab1c2e9",
+                    "guid": "5caa005236cff4dec9b20f3221390607",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
-                    "instanceID": 0
+                    "fileID": 7433441132597879392,
+                    "guid": "f6d7b2aa32ac44f34ae7c0c17115d367",
+                    "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "e7594feb49e4043418bf51515ab1c2e9",
-                    "UxmlPath": "Assets/UI Toolkit/DialogueBox.uxml",
+                    "UxmlGuid": "5caa005236cff4dec9b20f3221390607",
+                    "UxmlPath": "Assets/UI Toolkit/EnterDialogue.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
                     "CanvasWidth": 1920,
                     "CanvasHeight": 1080,
                     "MatchGameView": true,
-                    "ZoomScale": 0.44999998807907107,
+                    "ZoomScale": 0.25,
                     "PanOffset": {
-                        "x": -85.34513854980469,
-                        "y": 9.182373046875
+                        "x": 231.54541015625,
+                        "y": 216.01251220703126
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
                     "CameraModeCanvasBackgroundOpacity": 1.0,
-                    "EnableCanvasBackground": true,
+                    "EnableCanvasBackground": false,
                     "CanvasBackgroundMode": 0,
                     "CanvasBackgroundColor": {
                         "r": 0.0,

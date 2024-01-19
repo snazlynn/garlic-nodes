@@ -1,0 +1,8 @@
+.label{
+    align-self:center;
+}
+
+.button{
+    display:flex;
+    align-self:center;
+}

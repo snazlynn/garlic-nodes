@@ -46,6 +46,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one instance of Dialogue Manager");
         }
         instance = this;
+        DialogueVariables.setDict();
     }
 
     // returns this instance
@@ -67,6 +68,14 @@ public class DialogueManager : MonoBehaviour
         option2 = (Button) choiceButtons[1];
         option3 = (Button) choiceButtons[2];
 
+        currentStory = new Story(inkJSON.text);
+
+        // updates variable dict whenever var changes
+        currentStory.ObserveVariables(DialogueVariables.variableKeys, (variableName, newValue) =>
+        {
+            DialogueVariables.VariableChanged(variableName, newValue);
+        });
+
         HideButtons();
         EnterDialogueMode();
     }
@@ -86,10 +95,8 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode()
     {
-        currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.visible = true;
-
         ContinueStory();
     }
 
@@ -118,15 +125,24 @@ public class DialogueManager : MonoBehaviour
                 DisplayChoices();
             }
             // otherwise exit
-            else if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 1) == 0)
-            {
-                SceneManager.LoadScene("Cutscene");
-            }
             else
             {
-                ExitDialogueMode();
-                SceneManager.LoadScene("PlanetSelection");
+                DialogueVariables.VariablesToStory();
+                ChangeScenes();
             }
+        }
+    }
+
+    private void ChangeScenes()
+    {
+        if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 1) == 0)
+        {
+            SceneManager.LoadScene("Cutscene");
+        }
+        else
+        {
+            ExitDialogueMode();
+            SceneManager.LoadScene("PlanetSelection");
         }
     }
 
