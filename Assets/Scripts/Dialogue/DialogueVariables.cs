@@ -10,17 +10,22 @@ public class DialogueVariables
     public static List<string> variableKeys;
     private static TextAsset globalJSON = Resources.Load<TextAsset>("ink_dialogue/globals");
     private static Story globalVariablesStory = new Story(globalJSON.text);
+    private static bool initDict = false;
 
     public static void setDict()
     {
-        variables = new Dictionary<string, object>();
-        foreach(string name in globalVariablesStory.variablesState)
+        if(!initDict)
         {
-            object value = globalVariablesStory.variablesState[name];
-            variables.Add(name, value);
-            //Debug.Log("initialized global dialogue variable " + name + " = " + value);
+            variables = new Dictionary<string, object>();
+            foreach(string name in globalVariablesStory.variablesState)
+            {
+                object value = globalVariablesStory.variablesState[name];
+                variables.Add(name, value);
+                // Debug.Log("initialized global dialogue variable " + name + " = " + value);
+            }
+            variableKeys = new List<string>(variables.Keys);
+            initDict = true;
         }
-        variableKeys = new List<string>(variables.Keys);
     }
 
     public static void VariableChanged(string name, object value)
@@ -35,11 +40,12 @@ public class DialogueVariables
     }
 
     // loads all updated variables into ink story
-    public static void VariablesToStory()
+    public static void VariablesToStory(Story story)
     {
         foreach(KeyValuePair<string, object> variable in variables)
         {
-            globalVariablesStory.variablesState[variable.Key] = variable.Value;
+            story.variablesState[variable.Key] = variable.Value;
+            Debug.Log("loaded " + variable.Key + " = " + story.variablesState[variable.Key]);
             
         }
     }

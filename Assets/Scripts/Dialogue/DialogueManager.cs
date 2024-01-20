@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
 {
     // ink files
     [SerializeField] private TextAsset inkJSON;
+    [SerializeField] private TextAsset globalJSON;
 
     // this dialogue manager obj
     private static DialogueManager instance;
@@ -30,6 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     // ink story
     private Story currentStory;
+    private Story globalStory;
     private bool dialogueIsPlaying;
     private Coroutine displayLineCoroutine;
     private bool canContinueNext = false;
@@ -69,6 +71,8 @@ public class DialogueManager : MonoBehaviour
         option3 = (Button) choiceButtons[2];
 
         currentStory = new Story(inkJSON.text);
+        globalStory = new Story(globalJSON.text);
+        DialogueVariables.VariablesToStory(currentStory);
 
         // updates variable dict whenever var changes
         currentStory.ObserveVariables(DialogueVariables.variableKeys, (variableName, newValue) =>
@@ -127,7 +131,6 @@ public class DialogueManager : MonoBehaviour
             // otherwise exit
             else
             {
-                DialogueVariables.VariablesToStory();
                 ChangeScenes();
             }
         }
