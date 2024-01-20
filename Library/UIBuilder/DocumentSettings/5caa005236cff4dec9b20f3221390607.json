@@ -3,8 +3,8 @@
     "UxmlPath": "Assets/UI Toolkit/EnterDialogue.uxml",
     "CanvasX": 0,
     "CanvasY": 0,
-    "CanvasWidth": 640,
-    "CanvasHeight": 480,
+    "CanvasWidth": 1920,
+    "CanvasHeight": 1080,
     "MatchGameView": true,
     "ZoomScale": 0.25,
     "PanOffset": {

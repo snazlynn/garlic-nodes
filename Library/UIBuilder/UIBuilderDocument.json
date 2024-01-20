@@ -17,41 +17,41 @@
                     {
                         "m_StyleSheet": {
                             "fileID": 7433441132597879392,
-                            "guid": "f6d7b2aa32ac44f34ae7c0c17115d367",
+                            "guid": "96ec02930f8113a4ab0b37bd76110a82",
                             "type": 3
                         },
                         "m_BackupStyleSheet": {
                             "instanceID": 0
                         },
-                        "m_OldPath": "Assets/UI Toolkit/EnterDialogueStyleSheet.uss"
+                        "m_OldPath": "Assets/UI Toolkit/Stylesheet.uss"
                     }
                 ],
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Toolkit/EnterDialogue.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Toolkit/TitleScreen.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "5caa005236cff4dec9b20f3221390607",
+                    "guid": "1dcd4eb5186af3b40a6ed532ea3cea41",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
                     "fileID": 7433441132597879392,
-                    "guid": "f6d7b2aa32ac44f34ae7c0c17115d367",
+                    "guid": "96ec02930f8113a4ab0b37bd76110a82",
                     "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "5caa005236cff4dec9b20f3221390607",
-                    "UxmlPath": "Assets/UI Toolkit/EnterDialogue.uxml",
+                    "UxmlGuid": "1dcd4eb5186af3b40a6ed532ea3cea41",
+                    "UxmlPath": "Assets/UI Toolkit/TitleScreen.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
-                    "CanvasWidth": 1920,
-                    "CanvasHeight": 1080,
-                    "MatchGameView": true,
+                    "CanvasWidth": 3048,
+                    "CanvasHeight": 1836,
+                    "MatchGameView": false,
                     "ZoomScale": 0.25,
                     "PanOffset": {
-                        "x": 231.54541015625,
-                        "y": 216.01251220703126
+                        "x": 13.75494384765625,
+                        "y": 114.25056457519531
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

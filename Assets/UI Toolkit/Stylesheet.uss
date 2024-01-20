@@ -1,8 +1,8 @@
 .button {
-    position: absolute;
-    bottom: 10%;
-    width: 160px;
-    height: 65px;
+    position: relative;
+    bottom: auto;
+    width: 77%;
+    height: 6%;
     font-size: 24px;
     -unity-font-style: normal;
     border-top-width: 5px;
@@ -14,14 +14,25 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     align-self: center;
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(56, 56, 56, 0);
+    border-right-color: rgba(56, 56, 56, 0);
+    border-top-color: rgba(56, 56, 56, 0);
+    border-bottom-color: rgba(56, 56, 56, 0);
     background-image: url('project://database/Assets/sourceImages/UI/choicebox.png?fileID=21300000&guid=0cee24b814f0e494c94eb398ccc44569&type=3#choicebox');
     background-color: rgba(56, 56, 56, 0);
-    -unity-font-definition: url('project://database/Assets/minecraft-font/MinecraftRegular-Bmg3%20SDF.asset?fileID=11400000&guid=c7d1599fb4e5f4a06858fb2832088869&type=2#MinecraftRegular-Bmg3 SDF');
+    -unity-font-definition: url('project://database/Assets/minecraft%20font/Minecraftchmc-dBlX%20SDF.asset?fileID=11400000&guid=c407c08d1c7274fab93e15fcf2e44aae&type=2#Minecraftchmc-dBlX SDF');
     color: rgb(255, 212, 69);
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    transform-origin: center;
+    -unity-text-align: middle-center;
+    flex-wrap: nowrap;
+    align-self: center;
+    top: 20%;
 }
 
 .dialogueBox {
@@ -54,6 +65,43 @@
     margin-bottom: 20px;
     margin-right: 40px;
     margin-left: 40px;
-    -unity-font-definition: url('project://database/Assets/roboto-remix-font/Minecraftchmc-dBlX%20SDF.asset?fileID=11400000&guid=c407c08d1c7274fab93e15fcf2e44aae&type=2#Minecraftchmc-dBlX SDF');
+    -unity-font-definition: url('project://database/Assets/minecraft%20font/Minecraftchmc-dBlX%20SDF.asset?fileID=11400000&guid=c407c08d1c7274fab93e15fcf2e44aae&type=2#Minecraftchmc-dBlX SDF');
     -unity-font-style: normal;
+}
+
+.titleButton {
+    position: relative;
+    bottom: auto;
+    width: 77%;
+    height: 6%;
+    font-size: 24px;
+    -unity-font-style: normal;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    align-self: center;
+    border-left-color: rgba(56, 56, 56, 0);
+    border-right-color: rgba(56, 56, 56, 0);
+    border-top-color: rgba(56, 56, 56, 0);
+    border-bottom-color: rgba(56, 56, 56, 0);
+    background-image: url('project://database/Assets/sourceImages/UI/choicebox.png?fileID=21300000&guid=0cee24b814f0e494c94eb398ccc44569&type=3#choicebox');
+    background-color: rgba(56, 56, 56, 0);
+    -unity-font-definition: url('project://database/Assets/minecraft%20font/Minecraftchmc-dBlX%20SDF.asset?fileID=11400000&guid=c407c08d1c7274fab93e15fcf2e44aae&type=2#Minecraftchmc-dBlX SDF');
+    color: rgb(255, 212, 69);
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    transform-origin: center;
+    -unity-text-align: middle-center;
+    flex-wrap: nowrap;
+    align-self: center;
+    top: 20%;
 }

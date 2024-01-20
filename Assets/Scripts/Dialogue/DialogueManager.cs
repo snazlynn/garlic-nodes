@@ -22,12 +22,15 @@ public class DialogueManager : MonoBehaviour
     private Label dialogueText;
     private Label name;
 
-    private List<VisualElement> choiceButtons; // list of ui for choices
+    private List<VisualElement> choiceButtons; // button ui in list
+    private List<Button> buttonList; // actual order of buttons
 
     // choice ui
+    Button option0;
     Button option1;
     Button option2;
     Button option3;
+    Button option4;
 
     // ink story
     private Story currentStory;
@@ -66,9 +69,18 @@ public class DialogueManager : MonoBehaviour
         dialogueText = dialoguePanel.Q<Label>("Speech");
 
         choiceButtons = dialoguePanel.Query(className: "button").ToList();  
-        option1 = (Button) choiceButtons[0];
-        option2 = (Button) choiceButtons[1];
-        option3 = (Button) choiceButtons[2];
+        option0 = (Button) choiceButtons[2];
+        option1 = (Button) choiceButtons[1];
+        option2 = (Button) choiceButtons[3];
+        option3 = (Button) choiceButtons[0];
+        option4 = (Button) choiceButtons[4];
+
+        buttonList = new List<Button>();
+        buttonList.Add(option0);
+        buttonList.Add(option1);
+        buttonList.Add(option2);
+        buttonList.Add(option3);
+        buttonList.Add(option4);
 
         currentStory = new Story(inkJSON.text);
         globalStory = new Story(globalJSON.text);
@@ -138,7 +150,14 @@ public class DialogueManager : MonoBehaviour
 
     private void ChangeScenes()
     {
-        if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 1) == 0)
+        // on the first day, allow all 5 interactions w planets
+        if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["currentDay"], 1) == 0 && 
+            Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 5) == 0)
+        {
+            SceneManager.LoadScene("Cutscene");
+        }
+        // otherwise allow 4
+        else if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 4) == 0)
         {
             SceneManager.LoadScene("Cutscene");
         }
@@ -225,9 +244,9 @@ public class DialogueManager : MonoBehaviour
         List<VisualElement> visibleButtons = new List<VisualElement>();
         foreach(Choice c in currentChoices)
         {
-            choiceButtons[index].visible = true; // makes next button visible
-            visibleButtons.Add(choiceButtons[index]);
-            ((Button)choiceButtons[index]).text = c.text; // sets ui text = choice text
+            buttonList[index].visible = true; // makes next button visible
+            visibleButtons.Add(buttonList[index]);
+            ((Button)buttonList[index]).text = c.text; // sets ui text = choice text
             index++;
         }
 
@@ -237,12 +256,16 @@ public class DialogueManager : MonoBehaviour
             // who needs to learn programming languages when you can spend 4 hours crawling through documentation and 12 year old forums 
             // just to copy and paste two lines of sample code LET'S GO
             // i have no idea what this callback shit does i guess it checks if the button was clicked or something
+            option0.clickable.activators.Clear();
+            option0.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
             option1.clickable.activators.Clear();
             option1.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
             option2.clickable.activators.Clear();
             option2.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
             option3.clickable.activators.Clear();
             option3.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
+            option4.clickable.activators.Clear();
+            option4.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
         }
     }
 
@@ -255,6 +278,7 @@ public class DialogueManager : MonoBehaviour
         if (evt.eventTypeId == MouseDownEvent.TypeId())
         {
             // picks choice from story by taking the button name as an index
+            Debug.Log("choice " + ((int) int.Parse(b.name)) + " picked");
             currentStory.ChooseChoiceIndex( ((int) int.Parse(b.name)) );
 
             // displays dialogue for choice picked
