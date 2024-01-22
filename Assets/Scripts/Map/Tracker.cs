@@ -17,6 +17,8 @@ public class Tracker : MonoBehaviour
 
     public static string orbiting = "";
 
+    public static GameObject lastPlanet;
+
     void Awake()
     {
         if (Instance != null){

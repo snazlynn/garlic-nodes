@@ -38,6 +38,7 @@ public class orbit : MonoBehaviour
         Tracker.orbiting = planet.name;
         cam.GetComponent<CameraController>().target = planet;
         planetSpeed = planet.GetComponent<Rotate>().rotateSpeed;
+        Tracker.lastPlanet.GetComponent<Collider2D>().enabled = true;
     }
 
     void Update(){
@@ -74,16 +75,15 @@ public class orbit : MonoBehaviour
         planetDirections["Pluto"] = GameObject.Find("Pluto").transform.position-transform.position;
         if(Input.GetKeyDown(KeyCode.Space) && !Tracker.orbiting.Equals("")){
             GetComponent<Rigidbody2D>().isKinematic = false;
-            StartCoroutine(launch());
+            launch();
         }
     }
 
-    IEnumerator launch(){
+    void launch(){
         cam.GetComponent<CameraController>().target = gameObject;
         Tracker.orbiting = "";
         GetComponent<Rigidbody2D>().AddForce(launchVector*launchSpeed);
         planet.GetComponent<Collider2D>().enabled = false;
-        yield return new WaitForSeconds(0.1f);
-        planet.GetComponent<Collider2D>().enabled = true;
+        Tracker.lastPlanet = planet;
     }
 }

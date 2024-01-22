@@ -69,9 +69,9 @@
     <Compile Include="Assets\Scripts\Music\FadeIn.cs" />
     <Compile Include="Assets\Scripts\SavingLoading\IDataService.cs" />
     <Compile Include="Assets\Scripts\Music\KeepBetweenScenes.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\LeaveConversationUI.cs" />
     <Compile Include="Assets\Scripts\Music\FadeOut.cs" />
     <Compile Include="Assets\Scripts\Map\Orbit.cs" />
+    <Compile Include="Assets\Scripts\Map\DialoguePrompt.cs" />
     <Compile Include="Assets\Scripts\SavingLoading\JsonDataService.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueVariables.cs" />
     <Compile Include="Assets\Scripts\Map\Gravity.cs" />
@@ -85,8 +85,10 @@
   <ItemGroup>
     <None Include="Assets\minecraft font\info.txt" />
     <None Include="Assets\UI Toolkit\Stylesheet.uss" />
+    <None Include="Assets\UI Toolkit\EnterDialogueStyleSheet.uss" />
     <None Include="Assets\UI Toolkit\DialogueBox.uxml" />
-    <None Include="Assets\UI Toolkit\LeaveConversationUI.uxml" />
+    <None Include="Assets\title-button.uss" />
+    <None Include="Assets\UI Toolkit\EnterDialogue.uxml" />
     <None Include="Assets\UI Toolkit\TitleScreen.uxml" />
     <None Include="Assets\Scripts\SavingLoading\Data Persistence Readme.txt" />
   </ItemGroup>
