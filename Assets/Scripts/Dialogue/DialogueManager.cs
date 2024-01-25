@@ -26,11 +26,11 @@ public class DialogueManager : MonoBehaviour
     private List<Button> buttonList; // actual order of buttons
 
     // choice ui
-    Button option0;
-    Button option1;
-    Button option2;
-    Button option3;
-    Button option4;
+    private Button option0;
+    private Button option1;
+    private Button option2;
+    private Button option3;
+    private Button option4;
 
     // ink story
     private Story currentStory;
@@ -103,7 +103,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         // goes to next line/shows choices/ends conversation if clicked and line is done typing
-        if(canContinueNext && Input.GetMouseButtonDown(0))
+        if(canContinueNext && Input.GetMouseButtonDown(0) && !PauseScript.isPaused)
         {
             ContinueStory();
         }
@@ -190,7 +190,7 @@ public class DialogueManager : MonoBehaviour
         {
             // checks if the mouse was clicked and if it's not clicking to go to the next line
             // kind of buggy though sometimes it doesn't register the mouse click or something idk
-            if(Input.GetMouseButtonDown(0) && dialogueText.text.Length > 0)
+            if(Input.GetMouseButtonDown(0) && dialogueText.text.Length > 0 && !PauseScript.isPaused)
             {
                 dialogueText.text = line;
                 break;
@@ -251,7 +251,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // if there is at least one choice and dialogue is done printing
-        if(visibleButtons.Count > 0  && canContinueNext)
+        if(visibleButtons.Count > 0  && canContinueNext && !PauseScript.isPaused)
         {
             // who needs to learn programming languages when you can spend 4 hours crawling through documentation and 12 year old forums 
             // just to copy and paste two lines of sample code LET'S GO
@@ -278,7 +278,6 @@ public class DialogueManager : MonoBehaviour
         if (evt.eventTypeId == MouseDownEvent.TypeId())
         {
             // picks choice from story by taking the button name as an index
-            Debug.Log("choice " + ((int) int.Parse(b.name)) + " picked");
             currentStory.ChooseChoiceIndex( ((int) int.Parse(b.name)) );
 
             // displays dialogue for choice picked

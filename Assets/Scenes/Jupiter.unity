@@ -581,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 1b60e574c903b4f3e907cc66e022b6b1, type: 3}
+  globalJSON: {fileID: 4900000, guid: 1fcbefa14982846dfb05b751fe8fd65f, type: 3}
 --- !u!1 &2075696112
 GameObject:
   m_ObjectHideFlags: 0

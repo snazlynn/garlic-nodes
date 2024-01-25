@@ -285,7 +285,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.27
 --- !u!114 &73782246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,9 +544,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.18
 --- !u!114 &252214980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,7 +723,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.24
 --- !u!114 &371606897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 792595359}
   - component: {fileID: 792595358}
   m_Layer: 5
-  m_Name: UIDocument
+  m_Name: Enter Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1361,6 +1361,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 0
+--- !u!1 &1133686495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133686497}
+  - component: {fileID: 1133686498}
+  - component: {fileID: 1133686496}
+  m_Layer: 0
+  m_Name: Pause Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1133686496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133686495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1c63e1696cc4d23ba59f52d647d2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1133686497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133686495}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.273926, y: -2.6482172, z: 3.641462}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133686498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133686495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 8a0d1bedba70c9142bd29888fa4dd037, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: fa7fbfbd7e777476381a6f7147b23e40, type: 3}
+  m_SortingOrder: 0
 --- !u!1 &1183961364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,7 +1947,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.34
 --- !u!114 &1632644341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2240,7 +2301,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.27
 --- !u!114 &1804473512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2417,7 +2478,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.24
 --- !u!114 &1820766530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2594,7 +2655,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.27
 --- !u!114 &2016272359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2775,3 +2836,4 @@ SceneRoots:
   - {fileID: 172408808}
   - {fileID: 1183961366}
   - {fileID: 792595360}
+  - {fileID: 1133686497}

@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Stylesheet.uss?fileID=7433441132597879392&amp;guid=96ec02930f8113a4ab0b37bd76110a82&amp;type=3#Stylesheet" />
+    <ui:VisualElement style="flex-grow: 1; align-items: auto; justify-content: center; align-self: auto;">
+        <ui:VisualElement name="pauseBox" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/sourceImages/UI/pausescreen.png?fileID=21300000&amp;guid=becc15c9a86014773b20dfaa2e2eddd5&amp;type=3#pausescreen&apos;); max-width: 65%; max-height: 65%; translate: 0 0; align-self: center; justify-content: flex-start; align-items: center; height: 100%; width: 100%;">
+            <ui:Label tabindex="-1" text="Paused" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Paused" style="align-items: center; justify-content: center; align-self: center; -unity-font-definition: url(&apos;project://database/Assets/minecraft%20font/Minecraftchmc-dBlX%20SDF.asset?fileID=11400000&amp;guid=c407c08d1c7274fab93e15fcf2e44aae&amp;type=2#Minecraftchmc-dBlX SDF&apos;); font-size: 80%; color: rgb(255, 212, 69); translate: 0 20%; -unity-font-style: italic; margin-bottom: 2px; padding-bottom: 20px;" />
+            <ui:VisualElement name="PopUp" style="flex-grow: 1; max-height: 45%; background-image: url(&apos;project://database/Assets/sourceImages/UI/popup.png?fileID=21300000&amp;guid=397b126ad55724bba8b1ebd1b9f3375f&amp;type=3#popup&apos;); max-width: 100%; height: auto; width: 35%; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%; align-items: center; justify-content: center; align-self: center; flex-direction: column; flex-wrap: nowrap;">
+                <ui:Label tabindex="-1" text="Are you sure?" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" name="Question" style="-unity-font-definition: url(&apos;project://database/Assets/minecraft%20font/Minecraftchmc-dBlX%20SDF.asset?fileID=11400000&amp;guid=c407c08d1c7274fab93e15fcf2e44aae&amp;type=2#Minecraftchmc-dBlX SDF&apos;); font-size: 50%; align-items: stretch; -unity-text-align: upper-center; color: rgb(169, 230, 248); margin-top: 20%; margin-right: 20%; margin-bottom: 20%; margin-left: 20%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                <ui:VisualElement name="YesOrNo" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center; align-self: center; height: auto; width: 70%;">
+                    <ui:Button text="Yes" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Yes" class="pauseButton" style="font-size: 45%;" />
+                    <ui:Button text="No" parse-escape-sequences="true" display-tooltip-when-elided="true" name="No" class="pauseButton" style="font-size: 45%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row; min-height: 0; max-width: 100%; max-height: 10%; height: auto; width: auto; align-self: center; align-items: stretch;">
+                <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Save" class="pauseButton" />
+                <ui:Button text="Load" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Load" class="pauseButton" />
+                <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Exit" class="pauseButton" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

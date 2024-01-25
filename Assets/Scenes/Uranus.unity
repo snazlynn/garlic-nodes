@@ -299,6 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: c9f931b46a57744c7b75e21f5e6dea17, type: 3}
+  globalJSON: {fileID: 4900000, guid: 1fcbefa14982846dfb05b751fe8fd65f, type: 3}
 --- !u!114 &718727124
 MonoBehaviour:
   m_ObjectHideFlags: 0

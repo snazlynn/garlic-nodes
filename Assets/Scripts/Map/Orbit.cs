@@ -73,7 +73,7 @@ public class orbit : MonoBehaviour
         planetDirections["Uranus"] = GameObject.Find("Uranus").transform.position-transform.position;
         planetDirections["Neptune"] = GameObject.Find("Neptune").transform.position-transform.position;
         planetDirections["Pluto"] = GameObject.Find("Pluto").transform.position-transform.position;
-        if(Input.GetKeyDown(KeyCode.Space) && !Tracker.orbiting.Equals("")){
+        if(Input.GetKeyDown(KeyCode.Space) && !Tracker.orbiting.Equals("") && !PauseScript.isPaused){
             GetComponent<Rigidbody2D>().isKinematic = false;
             launch();
         }

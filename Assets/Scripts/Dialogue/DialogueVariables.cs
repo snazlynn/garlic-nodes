@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
+using System.IO;
 
 public class DialogueVariables
 {
     // maps variable name to value of variable
-    private static Dictionary<string, object> variables;
+    public static Dictionary<string, object> variables;
     public static List<string> variableKeys;
-    private static TextAsset globalJSON = Resources.Load<TextAsset>("ink_dialogue/globals");
+    public static bool initDict = false;
+
+    private static char separator = System.IO.Path.DirectorySeparatorChar;
+    private static TextAsset globalJSON = Resources.Load<TextAsset>($"ink_dialogue{separator}globals");
     private static Story globalVariablesStory = new Story(globalJSON.text);
-    private static bool initDict = false;
 
     public static void setDict()
     {
@@ -36,7 +39,7 @@ public class DialogueVariables
             variables.Remove(name);
             variables.Add(name, value);
         }
-        Debug.Log("variable changed " + name + " = " + value);
+        // Debug.Log("variable changed " + name + " = " + value);
     }
 
     // loads all updated variables into ink story
@@ -45,7 +48,7 @@ public class DialogueVariables
         foreach(KeyValuePair<string, object> variable in variables)
         {
             story.variablesState[variable.Key] = variable.Value;
-            Debug.Log("loaded " + variable.Key + " = " + story.variablesState[variable.Key]);
+            // Debug.Log("loaded " + variable.Key + " = " + story.variablesState[variable.Key]);
             
         }
     }

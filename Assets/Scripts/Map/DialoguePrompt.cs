@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class DialoguePrompt : MonoBehaviour
 {
-    [SerializeField] private VisualElement dialoguePanel;
+    private VisualElement dialoguePanel;
     private Button button;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class DialoguePrompt : MonoBehaviour
         {
             dialoguePanel.visible = true;
             button.text = "Talk to " + Tracker.orbiting;
-
+            
             button.clickable.activators.Clear();
             button.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
         }
@@ -38,7 +38,7 @@ public class DialoguePrompt : MonoBehaviour
         // button clicked
         Button b = (Button)evt.currentTarget;
 
-        if (evt.eventTypeId == MouseDownEvent.TypeId())
+        if (evt.eventTypeId == MouseDownEvent.TypeId() && !PauseScript.isPaused)
         {
             SceneManager.LoadScene(Tracker.orbiting);
         }
