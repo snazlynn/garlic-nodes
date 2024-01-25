@@ -262,4 +262,6 @@ Well, I wouldn't go THAT far... #speaker:Deimos
 
 And so, Moon joined Phobos and Deimos in their orbit around Mars. And they were loved, and none were forgotten. #speaker: 
 
+~ currentDay++
+
 -> END

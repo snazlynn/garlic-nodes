@@ -629,4 +629,6 @@ Uranus... thank you. #speaker:Luna
 
 You really are my world. #speaker:Luna
 
+~ currentDay++
+
 -> END

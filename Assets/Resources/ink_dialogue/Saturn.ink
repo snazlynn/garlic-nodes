@@ -338,4 +338,6 @@ And you, and everyone. I'm here for all my favorite moons! #speaker:Saturn
 
 And so, Luna joined Saturn and their moons in orbit. Together, everyone was very cool. And Luna was happy. #speaker: 
 
+~ currentDay++
+
 -> END

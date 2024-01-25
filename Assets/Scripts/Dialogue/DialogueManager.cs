@@ -92,6 +92,11 @@ public class DialogueManager : MonoBehaviour
             DialogueVariables.VariableChanged(variableName, newValue);
         });
 
+        currentStory.ObserveVariable("picked", (variableName, newValue) =>
+        {
+            SceneManager.LoadScene((string)currentStory.variablesState["picked"]);
+        });
+
         HideButtons();
         EnterDialogueMode();
     }
@@ -155,6 +160,11 @@ public class DialogueManager : MonoBehaviour
             Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 5) == 0)
         {
             SceneManager.LoadScene("Cutscene");
+        }
+        // end of game
+        else if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["currentDay"], 5) == 0)
+        {
+            SceneManager.LoadScene("Titlescreen");
         }
         // otherwise allow 4
         else if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 4) == 0)

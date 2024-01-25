@@ -319,4 +319,6 @@ And so, Luna joined Jupiter in their orbit. And though the moons still frequentl
 
 Oh, Jupiter... you mean the world to me. #speaker:Luna
 
+~ currentDay++
+
 -> END

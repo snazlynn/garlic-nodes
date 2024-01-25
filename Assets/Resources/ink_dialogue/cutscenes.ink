@@ -42,18 +42,18 @@ My orbit's getting even worse. I don't think I have much time left. #speaker:Moo
 I can't hold on for much longer. I probably only have time for one more conversation. #speaker:Moon
 
 Who should I talk to? #speaker:Moon
-    * {merAffinity >= 5} Mercury.
+    * {merAffinity >= 5} [Mercury.]
         ~ picked = "Mercury"
-    * {marAffinity >= 4} Mars.
+    * {marAffinity >= 4} [Mars.]
         ~ picked = "Mars"
-    * {jupAffinity >= 4} Jupiter.
+    * {jupAffinity >= 4} [Jupiter.]
         ~ picked = "Jupiter"
-    * {satAffinity >= 3} Saturn.
+    * {satAffinity >= 3} [Saturn.]
         ~ picked = "Saturn"
-    * {uraAffinity >= 3} Uranus.
+    * {uraAffinity >= 3} [Uranus.]
         ~ picked = "Uranus"
     * No one.
-         ~ picked = "NonePicked"
+         ~ picked = "cutscene"
 
 -
 
@@ -69,5 +69,7 @@ I don't think is solar system is meant for me, after all. #speaker:Moon
 Maybe leaving is a good thing. I don't need to hold onto a planet just because that's what's expected of a moon. #speaker:Moon
 
 Well, I can decide that later. And in the meantime, there's an entire universe for me to explore. #speaker:Moon.
+
+~ currentDay++
 
 -> END

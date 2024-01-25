@@ -432,4 +432,6 @@ No promises on my side though lol #speaker:Moon
 
 HUH?? #speaker:Mercury
 
+~ currentDay++
+
 -> END
