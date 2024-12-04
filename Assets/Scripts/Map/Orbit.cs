@@ -7,6 +7,9 @@ public class orbit : MonoBehaviour
     public float moonSpeed;
     public Camera cam;
     public float launchSpeed;
+
+    public GameObject[] launchArrow;
+
     private GameObject planet;
     private float planetSpeed = 0f;
     private Vector2 launchVector;
@@ -35,24 +38,31 @@ public class orbit : MonoBehaviour
         Tracker.orbiting = planet.name;
         cam.GetComponent<CameraController>().target = planet;
         planetSpeed = planet.GetComponent<Rotate>().rotateSpeed;
+        Tracker.lastPlanet.GetComponent<Collider2D>().enabled = true;
     }
 
     void Update(){
-        if(!Tracker.orbiting.Equals("") && clockwise){
-            launchVector = new Vector2((transform.position-planet.transform.position).normalized.y, (transform.position-planet.transform.position).normalized.x*-1f);
-            //Debug.DrawRay(transform.position, launchVector*100.0f, Color.red);
-            transform.RotateAround(Vector3.zero, Vector3.forward, planetSpeed * Time.deltaTime);
-            transform.RotateAround(planet.transform.position, Vector3.back, moonSpeed * Time.deltaTime);
-        }
-        else if(!Tracker.orbiting.Equals("") && !clockwise){
-            launchVector = new Vector2((transform.position-planet.transform.position).normalized.y*-1f, (transform.position-planet.transform.position).normalized.x);
-            //Debug.DrawRay(transform.position, launchVector*100.0f, Color.green);
-            transform.RotateAround(Vector3.zero, Vector3.forward, planetSpeed * Time.deltaTime);
-            transform.RotateAround(planet.transform.position, Vector3.forward, moonSpeed * Time.deltaTime);
+        if(!Tracker.orbiting.Equals("")){
+            if (clockwise){
+                launchVector = new Vector2((transform.position-planet.transform.position).normalized.y, (transform.position-planet.transform.position).normalized.x*-1f);
+                Debug.DrawRay(transform.position, launchVector*10.0f, Color.green);
+                transform.RotateAround(Vector3.zero, Vector3.forward, planetSpeed * Time.deltaTime);
+                transform.RotateAround(planet.transform.position, Vector3.back, moonSpeed * Time.deltaTime);
+            }
+            else{
+               launchVector = new Vector2((transform.position-planet.transform.position).normalized.y*-1f, (transform.position-planet.transform.position).normalized.x);
+                Debug.DrawRay(transform.position, launchVector*10.0f, Color.green);
+                transform.RotateAround(Vector3.zero, Vector3.forward, planetSpeed * Time.deltaTime);
+                transform.RotateAround(planet.transform.position, Vector3.forward, moonSpeed * Time.deltaTime); 
+            }
+            for (int i = 0; i < launchArrow.Length; i++){
+                launchArrow[i].SetActive(true);
+                launchArrow[i].transform.SetPositionAndRotation(transform.position + new Vector3((launchVector*(float)i*launchSpeed*4.3f).x, (launchVector*(float)i).y*launchSpeed*4.3f, 0f) + new Vector3((launchVector*2.5f).x, (launchVector*2.5f).y, 0f), Quaternion.Euler(0f, 0f, -1f*Vector2.SignedAngle(launchVector, Vector2.up)));
+            }
         }
         else{
+            foreach (GameObject segment in launchArrow){segment.SetActive(false);}
             rbDirection = GetComponent<Rigidbody2D>().velocity;
-            //Debug.DrawRay(transform.position, rbDirection*100f, Color.blue);
         }
         planetDirections["Mercury"] = GameObject.Find("Mercury").transform.position-transform.position;
         planetDirections["Venus"] = GameObject.Find("Venus").transform.position-transform.position;
@@ -63,18 +73,17 @@ public class orbit : MonoBehaviour
         planetDirections["Uranus"] = GameObject.Find("Uranus").transform.position-transform.position;
         planetDirections["Neptune"] = GameObject.Find("Neptune").transform.position-transform.position;
         planetDirections["Pluto"] = GameObject.Find("Pluto").transform.position-transform.position;
-        if(Input.GetKeyDown(KeyCode.Space) && !Tracker.orbiting.Equals("")){
+        if(Input.GetKeyDown(KeyCode.Space) && !Tracker.orbiting.Equals("") && !PauseScript.isPaused){
             GetComponent<Rigidbody2D>().isKinematic = false;
-            StartCoroutine(launch());
+            launch();
         }
     }
 
-    IEnumerator launch(){
+    void launch(){
         cam.GetComponent<CameraController>().target = gameObject;
         Tracker.orbiting = "";
         GetComponent<Rigidbody2D>().AddForce(launchVector*launchSpeed);
         planet.GetComponent<Collider2D>().enabled = false;
-        yield return new WaitForSeconds(0.1f);
-        planet.GetComponent<Collider2D>().enabled = true;
+        Tracker.lastPlanet = planet;
     }
 }

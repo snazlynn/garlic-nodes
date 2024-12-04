@@ -8,8 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Titlescreen.unity
     guid: 9cda7821c27e3264191b54d9c9fbfd1f
-  - enabled: 1
-    path: Assets/Scenes/PlanetSelection.unity
+  - enabled: 0
+    path: Assets/Scenes/OldPlanetSelection.unity
     guid: a1079bb84eb067144af074c64cde6574
   - enabled: 1
     path: Assets/Scenes/Earth.unity
@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Venus.unity
     guid: e4114e8386c66134f9b981da3f729ba7
+  - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: d78453b448b4e49cdb0b4a49bfc02c9c
+  - enabled: 1
+    path: Assets/Scenes/PlanetSelection.unity
+    guid: 8e6e0b6a98afe9045b1de0e9f1a3220b
   m_configObjects: {}

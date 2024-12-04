@@ -1,153 +1,308 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-//using UnityEngine.Windows.Speech;
-//using UnityEditor.UIElements;
+using Ink.Runtime;
+using Ink.UnityIntegration;
 using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private float textSpeed = 0.02f;
-    [SerializeField] private Sentences sentences;
-    [SerializeField] private Questions questions;
+    // ink files
+    [SerializeField] private TextAsset inkJSON;
+    [SerializeField] private TextAsset globalJSON;
 
-    private int questionIndex;
-    private int sentenceIndex;
-    private int sentencesIndex;
-    private Label speech;
-    private Label speakerName;
+    // this dialogue manager obj
+    private static DialogueManager instance;
+    
+    // getting dialogue ui
+    private VisualElement dialoguePanel;
+
+    // dialogue box
+    private Label dialogueText;
+    private Label name;
+
+    private List<VisualElement> choiceButtons; // button ui in list
+    private List<Button> buttonList; // actual order of buttons
+
+    // choice ui
+    private Button option0;
     private Button option1;
     private Button option2;
     private Button option3;
-    private bool endOfSentences;
+    private Button option4;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // ink story
+    private Story currentStory;
+    private Story globalStory;
+    private bool dialogueIsPlaying;
+    private Coroutine displayLineCoroutine;
+    private bool canContinueNext = false;
 
-    public void StartDialogue(Label name, Label speech, Button option1, Button option2, Button option3) 
-    {
-        this.questionIndex = 0;
-        this.sentenceIndex = 0;
-        this.sentencesIndex = 0;
-        this.speech = speech;
-        this.speakerName = name;
-        this.option1 = option1;
-        this.option2 = option2;
-        this.option3 = option3;
+    // ink tags
+    private const string SPEAKER_TAG = "speaker";
+    private const string PORTRAIT_TAG = "portrait";
 
-        Debug.Log("conversation started");
-        DisplayNextSentence();
-    }
-    public void DisplayNextSentence() 
+    // instantiating instance
+    private void Awake()
     {
-        Debug.Log(this.sentenceIndex);
-        if (this.sentenceIndex >= this.sentences.sentences.rows[this.sentencesIndex].row.Length) 
+        if(instance != null)
         {
-            this.endOfSentences = true;
-            DisplayNextQuestion();
+            Debug.LogWarning("Found more than one instance of Dialogue Manager");
+        }
+        instance = this;
+        DialogueVariables.setDict();
+    }
+
+    // returns this instance
+    public static DialogueManager GetInstance()
+    {
+        return instance;
+    }
+
+    // starts dialogue mode once you enter scene
+    private void Start()
+    {
+        // instantiates all ui elements to the ui doc
+        dialoguePanel = GetComponent<UIDocument>().rootVisualElement;
+        name = dialoguePanel.Q<Label>("Name");
+        dialogueText = dialoguePanel.Q<Label>("Speech");
+
+        choiceButtons = dialoguePanel.Query(className: "button").ToList();  
+        option0 = (Button) choiceButtons[2];
+        option1 = (Button) choiceButtons[1];
+        option2 = (Button) choiceButtons[3];
+        option3 = (Button) choiceButtons[0];
+        option4 = (Button) choiceButtons[4];
+
+        buttonList = new List<Button>();
+        buttonList.Add(option0);
+        buttonList.Add(option1);
+        buttonList.Add(option2);
+        buttonList.Add(option3);
+        buttonList.Add(option4);
+
+        currentStory = new Story(inkJSON.text);
+        globalStory = new Story(globalJSON.text);
+        DialogueVariables.VariablesToStory(currentStory);
+
+        // updates variable dict whenever var changes
+        currentStory.ObserveVariables(DialogueVariables.variableKeys, (variableName, newValue) =>
+        {
+            DialogueVariables.VariableChanged(variableName, newValue);
+        });
+
+        currentStory.ObserveVariable("picked", (variableName, newValue) =>
+        {
+            SceneManager.LoadScene((string)currentStory.variablesState["picked"]);
+        });
+
+        HideButtons();
+        EnterDialogueMode();
+    }
+
+    private void Update()
+    {
+        if(!dialogueIsPlaying)
+        {
+            return;
+        }
+        // goes to next line/shows choices/ends conversation if clicked and line is done typing
+        if(canContinueNext && Input.GetMouseButtonDown(0) && !PauseScript.isPaused)
+        {
+            ContinueStory();
+        }
+    }
+
+    public void EnterDialogueMode()
+    {
+        dialogueIsPlaying = true;
+        dialoguePanel.visible = true;
+        ContinueStory();
+    }
+
+    private void ExitDialogueMode()
+    {
+        dialogueIsPlaying = false;
+        dialoguePanel.visible = false; // SetActive()
+        dialogueText.text = "";
+        HideButtons();
+    }
+
+    // if there's more text, continue, otherwise exit
+    private void ContinueStory()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+        if(currentStory.canContinue)
+        {
+            // sets dialogue box text
+            nextLine();
         }
         else
         {
-            this.endOfSentences = false;
-            StopAllCoroutines();
-            StartCoroutine(TypeSentence(this.sentences.sentences.rows[this.sentencesIndex].row[this.sentenceIndex]));
-            this.sentenceIndex++;
-        }
-    }
-    public void DisplayNextQuestion() 
-    {
-        try
-        {
-            if (questions.questions.rows[this.questionIndex].row.Count() == 2)
+            // after dialogue runs out, shows choices if there are any
+            if(currentStory.currentChoices.Count > 0)
             {
-                this.option1.style.display = DisplayStyle.Flex;
-                this.option2.style.display = DisplayStyle.Flex;
-
-                this.option1.text = questions.questions.rows[this.questionIndex].row[0].Remove(questions.questions.rows[this.questionIndex].row[0].Length - 1);
-                this.option2.text = questions.questions.rows[this.questionIndex].row[1].Remove(questions.questions.rows[this.questionIndex].row[1].Length - 1);
+                DisplayChoices();
             }
+            // otherwise exit
             else
             {
-                this.option1.style.display = DisplayStyle.Flex;
-                this.option2.style.display = DisplayStyle.Flex;
-                this.option3.style.display = DisplayStyle.Flex;
-
-                this.option1.text = questions.questions.rows[this.questionIndex].row[0].Remove(questions.questions.rows[this.questionIndex].row[0].Length - 1);
-                this.option2.text = questions.questions.rows[this.questionIndex].row[1].Remove(questions.questions.rows[this.questionIndex].row[1].Length - 1);
-                this.option3.text = questions.questions.rows[this.questionIndex].row[2].Remove(questions.questions.rows[this.questionIndex].row[2].Length - 1);
+                ChangeScenes();
             }
         }
-        catch (IndexOutOfRangeException) 
+    }
+
+    private void ChangeScenes()
+    {
+        // on the first day, allow all 5 interactions w planets
+        if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["currentDay"], 1) == 0 && 
+            Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 5) == 0)
         {
+            SceneManager.LoadScene("Cutscene");
+        }
+        // end of game
+        else if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["currentDay"], 5) == 0)
+        {
+            SceneManager.LoadScene("Titlescreen");
+        }
+        // otherwise allow 4
+        else if(Comparer.DefaultInvariant.Compare(currentStory.variablesState["dayInteractions"], 4) == 0)
+        {
+            SceneManager.LoadScene("Cutscene");
+        }
+        else
+        {
+            ExitDialogueMode();
             SceneManager.LoadScene("PlanetSelection");
         }
-        this.questionIndex++;
-        option1.clicked += () =>
-        {
-            this.sentenceIndex = 0;
-            this.sentencesIndex = (this.questionIndex - 1) * 3 + 1;
-            this.option1.style.display = DisplayStyle.None;
-            this.option2.style.display = DisplayStyle.None;
-            this.option3.style.display = DisplayStyle.None;
-            DisplayNextSentence();
-            return;
-        };
-        option2.clicked += () =>
-        {
-            this.sentenceIndex = 0;
-            this.sentencesIndex = (this.questionIndex - 1) * 3 + 2;
-            this.option1.style.display = DisplayStyle.None;
-            this.option2.style.display = DisplayStyle.None;
-            this.option3.style.display = DisplayStyle.None;
-            DisplayNextSentence();
-            return;
-        };
-        option3.clicked += () =>
-        {
-            this.sentenceIndex = 0;
-            this.sentencesIndex = (this.questionIndex - 1) * 3 + 3;
-            this.option1.style.display = DisplayStyle.None;
-            this.option2.style.display = DisplayStyle.None;
-            this.option3.style.display = DisplayStyle.None;
-            DisplayNextSentence();
-            return;
-        };
     }
-    IEnumerator TypeSentence(string sentence)
+
+    private void nextLine()
     {
-        char[] sentenceArray = sentence.ToCharArray();
-        if (String.Equals('0', sentenceArray[sentenceArray.Count() - 1]))
+        // prevents 2 coroutines from playing at once
+        if(displayLineCoroutine != null)
         {
-            this.speakerName.text = "Moon";
+            StopCoroutine(displayLineCoroutine);
         }
-        else if (String.Equals('1', sentenceArray[sentenceArray.Count() - 1]))
+        displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
+
+        HandleTag(currentStory.currentTags);
+    }
+
+    // prints one letter at a time
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = "";
+        canContinueNext = false;
+
+        foreach(char letter in line.ToCharArray())
         {
-            this.speakerName.text = sentences.planetName;
+            // checks if the mouse was clicked and if it's not clicking to go to the next line
+            // kind of buggy though sometimes it doesn't register the mouse click or something idk
+            if(Input.GetMouseButtonDown(0) && dialogueText.text.Length > 0 && !PauseScript.isPaused)
+            {
+                dialogueText.text = line;
+                break;
+            }
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(0.017f);
         }
-        else 
+
+        canContinueNext = true;
+    }
+
+    private void HandleTag(List<string> currentTags)
+    {
+        foreach(string tag in currentTags)
         {
-            this.speakerName.text = "";
-        }
-        sentenceArray = sentenceArray.SkipLast(1).ToArray();
-        this.speech.text = "";
-        foreach (char letter in sentenceArray) 
-        {
-            this.speech.text += letter;
-            yield return new WaitForSeconds(textSpeed);
+            string[] splitTag = tag.Split(':');
+            if(splitTag.Length != 2)
+            {
+                Debug.LogError("Tag could not be properly parsed: " + tag);
+            }
+
+            // gets rid of whitespaces
+            string tagKey = splitTag[0];
+            string tagValue = splitTag[1];
+
+            switch(tagKey)
+            {
+                case SPEAKER_TAG:
+                    name.text = tagValue;
+                    break;
+                case PORTRAIT_TAG:
+                    Debug.Log("Portrait: " + tagValue);
+                    break;
+                default:
+                    Debug.LogWarning("Tag came in but is currently not being handled :" + tag);
+                    break;
+            }
         }
     }
-    void Update()
+
+    private void DisplayChoices()
     {
-        if (Input.GetMouseButtonDown(0) && !endOfSentences) 
+        List<Choice> currentChoices = currentStory.currentChoices; // gets all choices from text file
+
+        if(currentChoices.Count > choiceButtons.Count)
         {
-            DisplayNextSentence();
+            Debug.LogError("More choices were given than UI can support." + choiceButtons.Count);
+        }
+
+        int index = 0;
+        List<VisualElement> visibleButtons = new List<VisualElement>();
+        foreach(Choice c in currentChoices)
+        {
+            buttonList[index].visible = true; // makes next button visible
+            visibleButtons.Add(buttonList[index]);
+            ((Button)buttonList[index]).text = c.text; // sets ui text = choice text
+            index++;
+        }
+
+        // if there is at least one choice and dialogue is done printing
+        if(visibleButtons.Count > 0  && canContinueNext && !PauseScript.isPaused)
+        {
+            // who needs to learn programming languages when you can spend 4 hours crawling through documentation and 12 year old forums 
+            // just to copy and paste two lines of sample code LET'S GO
+            // i have no idea what this callback shit does i guess it checks if the button was clicked or something
+            option0.clickable.activators.Clear();
+            option0.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
+            option1.clickable.activators.Clear();
+            option1.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
+            option2.clickable.activators.Clear();
+            option2.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
+            option3.clickable.activators.Clear();
+            option3.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
+            option4.clickable.activators.Clear();
+            option4.RegisterCallback<MouseDownEvent>(e => MyCallback(e));
+        }
+    }
+
+    // i think this picks a choice idk
+    void MyCallback(MouseDownEvent evt)
+    {
+        // button clicked
+        Button b = (Button)evt.currentTarget;
+
+        if (evt.eventTypeId == MouseDownEvent.TypeId())
+        {
+            // picks choice from story by taking the button name as an index
+            currentStory.ChooseChoiceIndex( ((int) int.Parse(b.name)) );
+
+            // displays dialogue for choice picked
+            nextLine();
+            HideButtons();
+        }
+    }
+
+    private void HideButtons()
+    {
+        int index = 0;
+        foreach(Button choice in choiceButtons)
+        {
+            choice.visible = false;
+            index++;
         }
     }
 }

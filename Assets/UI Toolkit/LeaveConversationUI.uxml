@@ -1,4 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/Stylesheet.uss?fileID=7433441132597879392&amp;guid=8e677fd2ac5393644b87e2feb86a87a8&amp;type=3#Stylesheet" />
-    <ui:Button text="Leave" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonLeave" class="button" />
-</ui:UXML>
